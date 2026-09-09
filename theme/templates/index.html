@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+  <h2 class = "page-title">Upcoming Talks & Events</h2>
+  <section class="upcoming-events">
+  <!-- Iterate over the global 'articles' list and filter by Category -->
+  {% for article in articles|sort(attribute='date') if article.category.name|lower == 'events' and article.isupcoming %}
+  <article class="event-card-upcoming">
+    <h3>{{article.eventtype}}: <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h3>
+    
+    <ul class="event-details">
+      {% if article.date %}<li><strong>Date:</strong> {{ article.date.strftime('%A, %d %B %Y') }}</li>{% endif %}
+      {% if article.time %}<li><strong>Time:</strong> {{ article.time }}</li>{% endif %}
+      {% if article.speaker %}<li><strong>Speaker:</strong> {{ article.speaker }}</li>{% endif %}
+      {% if article.location %}<li><strong>Location:</strong> {{ article.location }}</li>{% endif %}
+    </ul>
+
+    <div class="summary">{{ article.summary }}</div>
+    <a href="{{ SITEURL }}/{{ article.url }}">See more information &rarr;</a>
+  </article>
+  {% else %}
+  <p>No upcoming events currently scheduled. Check back soon!</p>
+  {% endfor %}</section>
+
+  <hr class="section-divider">
+
+  <h2>About TCSS</h2>
+  <p>
+    Trinity College Science Society is the most active science society in Cambridge, providing a rich programme of talks, panel discussions, quiz nights, and other social events. While based in Trinity College, all talks are free and open to all members of the university and the general public, and are accompanied by generous refreshments. Browse through our programme for the coming year to see the remarkable speakers and events we have lined up.
+  </p>
+  <a href="{{ SITEURL }}/pages/about-us.html"> See more information &rarr;</a>
+
+{% endblock %}

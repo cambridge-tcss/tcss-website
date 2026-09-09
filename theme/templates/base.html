@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Title Block -->
+  <title>{% block title %}{% if page %}{{ page.title }} | {% elif article %}{{ article.title }} | {% endif %}{% endblock %}{{ SITENAME }}</title>
+
+  <!-- CSS Link -->
+  <link rel="stylesheet" href="{{ SITEURL }}/theme/css/style.css">
+
+  <!-- Favicon & Apple Touch Icons -->
+  <link rel="icon" type="image/x-icon" href="{{ SITEURL }}/theme/images/favicon.ico">
+  
+</head>
+
+<body>
+  <!-- Global Header -->
+  <header>
+  <div class="header-container">
+
+    <h1><a href="{{ SITEURL }}/" class="site-title">{{ SITENAME }}</a></h1>
+
+    <!-- Navigation Bar -->
+    <nav>
+      <ul>
+        <li>
+          <a href="{{ SITEURL }}/" class="{% if output_file == 'index.html' %}active{% endif %}">
+            Home
+          </a>
+        </li>
+        <li>
+          <a href="{{ SITEURL }}/events/" class="{% if page and page.url == 'events/' or article and article.category.name|lower == 'events' %}active{% endif %}">
+            Events
+          </a>
+        </li>
+        <li>
+          <a href="{{ SITEURL }}/blog/" class="{% if page and page.url == 'blog/' or article and article.category.name|lower == 'blog' %}active{% endif %}">
+            Blog
+          </a>
+        </li>
+        <li>
+          <a href="{{ SITEURL }}/pages/about-us.html" class="{% if page and page.url == 'pages/about-us.html' %}active{% endif %}">
+            About
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+  <!-- Main Content Block -->
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+
+  <!-- Global Footer -->
+  <footer>
+    <div class="footer-container">
+      <p>&copy; {{ CURRENT_YEAR|default('2026') }} Trinity College Science Society. Hosted on the <a href="https://www.srcf.net" target="_blank" rel="noopener">SRCF</a>.</p>
+      <p><small>Trinity College, Cambridge, CB2 1TQ</small></p>
+    </div>
+  </footer>
+</body>
+</html>

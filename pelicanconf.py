@@ -1,0 +1,111 @@
+from datetime import datetime
+from pelican import signals
+from datetime import timezone
+
+def add_event_status(generator):
+    """Dynamically set article.isupcoming based on build time (UTC aware)."""
+    now = datetime.now(timezone.utc)
+
+    for article in generator.articles:
+        # 1. Guard clause: Ignore non-events
+        if str(article.category).lower() != 'events':
+            continue
+
+        # 2. Guard clause: Handle missing or invalid dates
+        if not (hasattr(article, 'date') and article.date):
+            article.isupcoming = False
+            continue
+
+        # 3. Ensure event date is timezone-aware for comparison
+        event_date = article.date
+        if event_date.tzinfo is None:
+            event_date = event_date.replace(tzinfo=timezone.utc)
+
+        # 4. Compare directly
+        article.isupcoming = event_date >= now
+
+def register():
+    signals.article_generator_finalized.connect(add_event_status)
+
+register()
+
+AUTHOR = 'Max Lian'
+SITENAME = 'Trinity College Science Society'
+SITEURL = ""
+
+PATH = "content"
+
+TIMEZONE = 'Europe/London'
+
+DEFAULT_LANG = 'en'
+
+# Feed generation is usually not desired when developing
+FEED_ALL_ATOM = None
+CATEGORY_FEED_ATOM = None
+TRANSLATION_FEED_ATOM = None
+AUTHOR_FEED_ATOM = None
+AUTHOR_FEED_RSS = None
+
+# Blogroll
+LINKS = [
+    ("Pelican", "https://getpelican.com/"),
+    ("Python.org", "https://www.python.org/"),
+    ("Jinja2", "https://palletsprojects.com/p/jinja/"),
+    ("You can modify those links in your config file", "#"),
+]
+
+# Social widget
+SOCIAL = [
+    ("You can add links in your config file", "#"),
+    ("Another social link", "#"),
+]
+
+DEFAULT_PAGINATION = 10
+
+# Uncomment following line if you want document-relative URLs when developing
+RELATIVE_URLS = True
+
+# ----------------------------------------------------------------------
+# Additional settings by Max following Al Sweigart's blog
+# https://inventwithpython.com/blog/pelican-tutorial.html#:~:text=(%20Y%2Fn)%20Y%20%3E%20Do%20you%20want,your%20website%20using%20Rackspace%20Cloud%20Files%3F%20(
+
+LOAD_CONTENT_CACHE = False  # default was True
+DELETE_OUTPUT_DIRECTORY = True  # default was False
+INDEX_SAVE_AS = 'index.html'  # default was 'index.html'
+THEME = 'theme'
+
+# ----------------------------------------------------------------------
+# URL & Directory Structure Rules
+# ----------------------------------------------------------------------
+# This determines folder structure (directory structure) in output
+
+PATH = 'content'
+
+# Tells Pelican where to find content
+PAGE_PATHS = ['pages']
+ARTICLE_PATHS = ['events', 'blog']
+STATIC_PATHS = ['static']
+
+# Organize static pages into /pages/
+PAGE_URL = 'pages/{slug}.html'
+PAGE_SAVE_AS = 'pages/{slug}.html'
+
+# Dynamically route articles by category (creates /events/ and /blog/ output folders)
+ARTICLE_URL = '{category}/{slug}.html'
+ARTICLE_SAVE_AS = '{category}/{slug}.html'
+
+
+'''
+# Generate Category Archive Pages (e.g., a page listing ALL blog posts or ALL events)
+CATEGORY_URL = '{slug}/index.html'
+CATEGORY_SAVE_AS = '{slug}/index.html'
+'''
+
+
+# Disable unused auto-generated pages to keep output clean
+AUTHOR_SAVE_AS = ''
+AUTHORS_SAVE_AS = ''
+ARCHIVES_SAVE_AS = ''
+TAG_SAVE_AS = ''
+TAGS_SAVE_AS = ''
+CATEGORIES_SAVE_AS = ''  # Disables the generic multi-category overview page

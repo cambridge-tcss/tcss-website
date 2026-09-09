@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block title %}{{ category.name|capitalize }} | {{ SITENAME }}{% endblock %}
+
+{% block content %}
+<section class="events-page">
+    <h2 class="page-title">{{ category.name|capitalize }} Catalogue</h2>
+    <p class="page-subtitle">
+      Browse all entries under <strong>{{ category.name }}</strong>.<br>
+    </p>
+
+  <div class="category-list">
+    {% for article in articles %}
+      <article class="event-card-past">
+        <h3>
+          <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a>
+        </h3>
+        
+        <div class="item-meta">
+          <time datetime="{{ article.date.isoformat() }}">
+            {{ article.date.strftime('%d %B %Y') }}
+          </time>
+          {% if article.speaker %}
+            <span class="meta-sep">&bull;</span>
+            <span class="speaker-name">Speaker: <em>{{ article.speaker }}</em></span>
+          {% endif %}
+        </div>
+
+        {% if article.summary %}
+          <div class="item-summary">
+            {{ article.summary }}
+          </div>
+        {% endif %}
+      </article>
+    {% else %}
+      <p class="no-posts-notice">No archived events found in this category.</p>
+    {% endfor %}
+  </div>
+
+  <!-- PAGINATION (Optional) -->
+  {% if articles_page and articles_page.has_other_pages() %}
+    <nav class="pagination-nav">
+      <div class="pagination-links">
+        {% if articles_page.has_previous() %}
+          <a href="{{ SITEURL }}/{{ articles_previous_page.url }}" class="page-prev">&larr; Newer Events</a>
+        {% endif %}
+        
+        <span class="page-number">
+          Page {{ articles_page.number }} of {{ articles_paginator.num_pages }}
+        </span>
+
+        {% if articles_page.has_next() %}
+          <a href="{{ SITEURL }}/{{ articles_next_page.url }}" class="page-next">Older Events &rarr;</a>
+        {% endif %}
+      </div>
+    </nav>
+  {% endif %}
+</section>
+{% endblock %}
