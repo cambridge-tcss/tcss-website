@@ -1,8 +1,10 @@
-Title: Quantum
+Title: NotRealEvent
+EventType: Talk
 Speaker: Jane Doe
-Status published
-Date: 20-09-2026
+Status: published
+Date: 2026-09-20
 Time: 18:00
 Location: Winstanley LT
+EventID: notreal2026
 
-This is our first event
+This is not a real event

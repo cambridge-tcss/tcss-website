@@ -19,36 +19,29 @@
   <!-- Global Header -->
   <header>
   <div class="header-container">
-
+    <!--Page Title-->
     <h1><a href="{{ SITEURL }}/" class="site-title">{{ SITENAME }}</a></h1>
-
     <!-- Navigation Bar -->
     <nav>
       <ul>
-        <li>
-          <a href="{{ SITEURL }}/" class="{% if output_file == 'index.html' %}active{% endif %}">
+        <li><a href="{{ SITEURL }}/" class="{% if output_file == 'index.html' %}active{% endif %}">
             Home
-          </a>
-        </li>
-        <li>
-          <a href="{{ SITEURL }}/events/" class="{% if page and page.url == 'events/' or article and article.category.name|lower == 'events' %}active{% endif %}">
+        </a></li>
+        <li><a href="{{ SITEURL }}/events/" class="{% if page and page.url == 'events/' or article and article.category.name|lower == 'events' %}active{% endif %}">
             Events
-          </a>
-        </li>
-        <li>
-          <a href="{{ SITEURL }}/blog/" class="{% if page and page.url == 'blog/' or article and article.category.name|lower == 'blog' %}active{% endif %}">
+        </a></li>
+        <li><a href="{{ SITEURL }}/blog/" class="{% if page and page.url == 'blog/' or article and article.category.name|lower == 'blog' %}active{% endif %}">
             Blog
-          </a>
-        </li>
-        <li>
-          <a href="{{ SITEURL }}/pages/about-us.html" class="{% if page and page.url == 'pages/about-us.html' %}active{% endif %}">
+        </a></li>
+        <li><a href="{{ SITEURL }}/pages/about-us.html" class="{% if page and page.url == 'pages/about-us.html' %}active{% endif %}">
             About
-          </a>
-        </li>
+        </a></li>
       </ul>
     </nav>
+
   </div>
 </header>
+
   <!-- Main Content Block -->
   <main>
     {% block content %}{% endblock %}
