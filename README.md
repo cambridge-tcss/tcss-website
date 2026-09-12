@@ -7,10 +7,10 @@ Each article (event or blog) should contain a header metadata (to be included at
 For events:
 
 Title:         # **This is the name of the event** <br>
-EventType:     # **Talk, Panel Discussion, Quiz night...**
-Speaker:       # Name of speaker, if applicable
-Status:        # **IMPORTANT**: set to `published` to publish the article; otherwise it will not show
-Date:          # **DATE MUST BE IN YYYY-MM-DD format**
-Time:          # Preferably in 24 hour format
-Location:      # Location 
-EventID:       # Set to any arbitrary value (e.g. quantum-talk-2026). Blog posts with the same EventID as                     any article will be linked in the event page. 
+EventType:     # **Talk, Panel Discussion, Quiz night...** <br>
+Speaker:       # Name of speaker, if applicable <br>
+Status:        # **IMPORTANT**: set to `published` to publish the article; otherwise it will not show<br>
+Date:          # **DATE MUST BE IN YYYY-MM-DD format**<br>
+Time:          # Preferably in 24 hour format<br>
+Location:      # Location <br>
+EventID:       # Set to any arbitrary value (e.g. quantum-talk-2026). Blog posts with the same EventID as<br>                     any article will be linked in the event page.<br>
