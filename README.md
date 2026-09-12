@@ -6,7 +6,7 @@ Each article (event or blog) should contain a header metadata (to be included at
 
 For events:
 
-Title:         # **This is the name of the event**
+Title:         # **This is the name of the event** <br>
 EventType:     # **Talk, Panel Discussion, Quiz night...**
 Speaker:       # Name of speaker, if applicable
 Status:        # **IMPORTANT**: set to `published` to publish the article; otherwise it will not show
