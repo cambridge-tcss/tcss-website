@@ -243,15 +243,11 @@ h2.page-title {
    EVENT CARDS - Left accent line & Text format
    ========================================================================== */
 
-    /* ==========================================================================
-      UPCOMING EVENTS CONTAINER
-      ========================================================================== */
-
-/* Enabling flex-direction: column makes gap work reliably between events */
-.upcoming-events {
+/* Shared list layout */
+.event-list {
   display: flex;
   flex-direction: column;
-  gap: 1rem; 
+  gap: 1rem;
   width: 100%;
   margin-top: 1rem;
   margin-bottom: 2rem;
@@ -261,94 +257,90 @@ h2.page-title {
   list-style: none;
 }
 
-    /* ==========================================================================
-      UPCOMING EVENT CARD - Typography & LEFT ACCENT LINE 
-      ========================================================================== */
-.event-card-upcoming {
+/* Upcoming event card */
+.event-card--upcoming {
   position: relative;
   padding: 0.5rem 0 0.5rem 1.25rem;
   /* NO border-left here! The text container stays 100% static */
   width: 100%;
 }
 
-/* THE BRACKET SPINE & TOP ARM */
-.event-card-upcoming::before {
+/* Bracket styling for upcoming cards (icl. the upper arm of bracket) */
+.event-card--upcoming::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   bottom: 0; /* Stretches the vertical spine down the full height of the card */
   width: 0.5rem; /* Length of the top horizontal bracket arm */
-  
   /* Draws the vertical spine AND top horizontal arm together */
   border-left: 3px solid var(--color-primary);
   border-top: 3px solid var(--color-primary);
-  
-  /* Smoothly animates color and movement without touching the text */
-  transition: border-color 0.2s ease, transform 0.2s ease;
+  transition: border-color 0.2s ease, transform 0.2s ease; /* Smoothly animates color and movement without touching the text */
 }
-
-/* THE BOTTOM ARM */
-.event-card-upcoming::after {
+/* Complete the bracket with a bottom arm */
+.event-card--upcoming::after {
   content: "";
   position: absolute;
   bottom: 0;
   left: 0;
   width: 0.5rem; /* Length of the bottom horizontal bracket arm */
-  
-  /* Draws the bottom horizontal arm */
-  border-bottom: 3px solid var(--color-primary);
-  
-  /* Smoothly animates color and movement without touching the text */
-  transition: border-color 0.2s ease, transform 0.2s ease;
+  border-bottom: 3px solid var(--color-primary); /* Draws the bottom horizontal arm */
+  transition: border-color 0.2s ease, transform 0.2s ease; /* Smoothly animates color and movement without touching the text */
 }
 
-/* ==========================================================================
-   HOVER STATE: The entire [ bracket moves, text stays completely still!
-   ========================================================================== */
-
+/* Hover interaction */
 /* Shift the entire bracket slightly to the left (or right) and change color */
-.event-card-upcoming:hover::before,
-.event-card-upcoming:hover::after {
+.event-card--upcoming:hover::before,
+.event-card--upcoming:hover::after {
   border-color: var(--color-accent);
   transform: translateX(-0.30rem); /* Nudges the entire [ bracket outward */
 }
 
 /* Card Typography & Links */
-.event-card-upcoming h3 {
+.event-card--upcoming h3 {
   margin-top: 0;
   margin-bottom: 0.5rem;
   font-size: 1.2rem;
 }
 
-.event-card-upcoming h3 a {
+.event-card--upcoming h3 a {
   color: var(--color-accent);
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
-.event-card-upcoming h3 a:hover {
+.event-card--upcoming h3 a:hover {
   color: var(--color-accent-hover);
 }
 
-/* ==========================================================================
-      ARCHIVED EVENTS CONTAINER
-   ========================================================================== */
-
-.event-card-past {
+/* Archive / past events */
+.event-card--past {
   position: relative;
-  padding: 0rem 0 0rem 1.25rem;
-  /* NO border-left here! The text container stays 100% static */
+  padding: 0 0 0 1.25rem;
   width: 100%;
   border-left: 3px solid var(--color-primary);
 }
 
-.event-card-past h3 a {
+.event-card--past h3 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.event-card--past h3 a {
   color: var(--color-accent);
   transition: color 0.2s ease;
 }
 
+.event-card--past h3 a:hover {
+  color: var(--color-accent-hover);
+}
 
+.event-card--past .past-meta {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
 
 /* ==========================================================================
    RESPONSIVE BREAKPOINTS (Mobile Optimization)
@@ -357,12 +349,12 @@ h2.page-title {
 /* Tablet & Mobile Screens (768px and below) */
 @media (max-width: 48rem) {
   /* Reduce left padding on bracketed event cards to save screen real estate */
-  .event-card-upcoming {
+  .event-card--upcoming {
     padding-left: 0.85rem;
   }
 
-  .event-card-upcoming::before,
-  .event-card-upcoming::after {
+  .event-card--upcoming::before,
+  .event-card--upcoming::after {
     width: 0.35rem; /* Slightly shorten bracket arms on mobile */
   }
 
@@ -375,7 +367,7 @@ h2.page-title {
 
 /* Small Mobile Screens (480px and below) */
 @media (max-width: 30rem) {
-  .event-card-upcoming h3 {
+  .event-card--upcoming h3 {
     font-size: 1.05rem; /* Adjust title scaling so long talk names don't wrap awkwardly */
   }
 }
