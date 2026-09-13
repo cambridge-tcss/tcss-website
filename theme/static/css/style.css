@@ -255,6 +255,10 @@ h2.page-title {
   line-height: 1.5;
 }
 
+.page-content .page-body p {
+  text-align: justify;
+}
+
 /* ==========================================================================
    EVENT CARDS - Left accent line & Text format
    ========================================================================== */
