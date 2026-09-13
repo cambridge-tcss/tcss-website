@@ -238,6 +238,15 @@ h2.page-title {
   margin-bottom: 0.5rem;
 }
 
+/* Event article page format */
+.event-meta {
+  list-style: none;
+  margin-bottom: 0.8rem;
+}
+
+.event-content {
+  text-align: justify;
+}
 
 /* ==========================================================================
    EVENT CARDS - Left accent line & Text format
@@ -255,6 +264,10 @@ h2.page-title {
 
 .event-details {
   list-style: none;
+}
+
+.event-card .summary {
+  text-align: justify;
 }
 
 /* Upcoming event card */
