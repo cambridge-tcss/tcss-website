@@ -32,7 +32,7 @@
       {{ article.content }}
     </div>
 
-    <!-- Event Recap Embed Block -->
+    <!-- Event Recap Embed Block (blog post link) -->
   {% if article.category.name|lower == 'events' and article.eventid %}
     {% set matching_blogs = articles | selectattr('category.name', 'equalto', 'blog') | selectattr('eventid', 'defined') | selectattr('eventid', 'equalto', article.eventid) | list %}
     
