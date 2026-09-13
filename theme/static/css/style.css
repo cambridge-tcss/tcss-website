@@ -248,6 +248,13 @@ h2.page-title {
   text-align: justify;
 }
 
+.about-tcss p {
+  margin-top: 0.1rem;
+  margin-bottom: 1rem;
+  text-align: justify;
+  line-height: 1.5;
+}
+
 /* ==========================================================================
    EVENT CARDS - Left accent line & Text format
    ========================================================================== */
