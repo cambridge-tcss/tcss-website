@@ -417,7 +417,7 @@ h2.page-title {
 @media (max-width: 48rem) {
   body,
   body * {
-    text-align: left;
+    text-align: left !important;
   }
 
   /* Reduce left padding on bracketed event cards to save screen real estate */
