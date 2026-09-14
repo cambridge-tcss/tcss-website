@@ -415,6 +415,11 @@ h2.page-title {
 
 /* Tablet & Mobile Screens (768px and below) */
 @media (max-width: 48rem) {
+  body,
+  body * {
+    text-align: left;
+  }
+
   /* Reduce left padding on bracketed event cards to save screen real estate */
   .event-card--upcoming {
     padding-left: 0.85rem;
