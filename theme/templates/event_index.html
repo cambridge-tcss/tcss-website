@@ -45,14 +45,18 @@
     </div>
 
     <div class="event-list event-list--archive">
-      {% for article in articles if article.category.name|lower == 'events' and not article.isupcoming %}
-        <article class="event-card event-card--past">
-          <h3>{{article.eventtype}}: <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h3>
-          <p class="past-meta">
-            <time datetime="{{ article.date.isoformat() }}">{{ article.date.strftime('%d %B %Y') }}</time>
-            {% if article.speaker %} — <em>{{ article.speaker }}</em>{% endif %}
-          </p>
-        </article>
+      {% set recent_event_count = 0 %}
+      {% for article in articles|sort(attribute='date', reverse=True) if article.category.name|lower == 'events' and not article.isupcoming %}
+        {% if recent_event_count < 5 %}
+          {% set recent_event_count = recent_event_count + 1 %}
+          <article class="event-card event-card--past">
+            <h3>{{article.eventtype}}: <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h3>
+            <p class="past-meta">
+              <time datetime="{{ article.date.isoformat() }}">{{ article.date.strftime('%d %B %Y') }}</time>
+              {% if article.speaker %} — <em>{{ article.speaker }}</em>{% endif %}
+            </p>
+          </article>
+        {% endif %}
       {% else %}
         <p>No past events recorded yet.</p>
       {% endfor %}
