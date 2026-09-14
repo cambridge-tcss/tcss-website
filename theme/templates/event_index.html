@@ -16,8 +16,10 @@
     <div class="upcoming-events event-list event-list--upcoming">
       {% for article in articles if article.category.name|lower == 'events' and article.isupcoming %}
         <article class="event-card event-card--upcoming">
-          <h3>{{article.eventtype}}: <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h3>
-          
+          <h3>{% if article.eventtype %}{{article.eventtype}}: {% endif %}
+            <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a>
+          </h3>
+
           <ul class="event-details">
             {% if article.date %}<li><strong>Date:</strong> {{ article.date.strftime('%A, %d %B %Y') }}</li>{% endif %}
             {% if article.time %}<li><strong>Time:</strong> {{ article.time }}</li>{% endif %}
