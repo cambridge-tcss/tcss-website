@@ -14,7 +14,7 @@
     </div>
     
     <div class="upcoming-events event-list event-list--upcoming">
-      {% for article in articles if article.category.name|lower == 'events' and article.isupcoming %}
+      {% for article in articles|sort(attribute='date', reverse=False) if article.category.name|lower == 'events' and article.isupcoming %}
         <article class="event-card event-card--upcoming">
           <h3>{% if article.eventtype %}{{article.eventtype}}: {% endif %}
             <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a>
@@ -42,11 +42,12 @@
     <div class="section-header">
       <h2 id="past-events-title">Past events archive</h2>
       <p>Browse a record of previous events.</p>
+      <a href="{{ SITEURL }}/category/events.html">View full archive</a>
     </div>
 
     <div class="event-list event-list--archive">
       {% set recent_event_count = 0 %}
-      {% for article in articles if article.category.name|lower == 'events' and not article.isupcoming %}
+      {% for article in articles|sort(attribute='date', reverse=True) if article.category.name|lower == 'events' and not article.isupcoming %}
         {% if recent_event_count < 5 %}
           {% set recent_event_count = recent_event_count + 1 %}
           <article class="event-card event-card--past">
