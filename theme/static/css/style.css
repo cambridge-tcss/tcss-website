@@ -275,6 +275,7 @@ h2.page-title {
 
 .event-details {
   list-style: none;
+  margin-bottom: 0.3rem;
 }
 
 .event-card .summary {
@@ -284,7 +285,7 @@ h2.page-title {
 /* Upcoming event card */
 .event-card--upcoming {
   position: relative;
-  padding: 0.5rem 0 0.5rem 1.25rem;
+  padding: 0.4rem 0 0.75rem 1.25rem;
   /* NO border-left here! The text container stays 100% static */
   width: 100%;
 }
