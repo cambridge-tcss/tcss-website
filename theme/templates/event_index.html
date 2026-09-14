@@ -46,7 +46,7 @@
 
     <div class="event-list event-list--archive">
       {% set recent_event_count = 0 %}
-      {% for article in articles|sort(attribute='date', reverse=True) if article.category.name|lower == 'events' and not article.isupcoming %}
+      {% for article in articles if article.category.name|lower == 'events' and not article.isupcoming %}
         {% if recent_event_count < 5 %}
           {% set recent_event_count = recent_event_count + 1 %}
           <article class="event-card event-card--past">
@@ -57,8 +57,8 @@
             </p>
           </article>
         {% endif %}
-      {% else %}
-        <p>No past events recorded yet.</p>
+        {% else %}
+          <p>No past events recorded yet.</p>
       {% endfor %}
     </div>
   </section>
