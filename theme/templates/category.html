@@ -6,34 +6,39 @@
 <section class="events-page">
     <h2 class="page-title">{{ category.name|capitalize }} Catalogue</h2>
     <p class="page-subtitle">
-      Browse all entries under <strong>{{ category.name }}</strong>.<br>
+      Browse all entries under <strong>{{ category.name }}</strong>.
     </p>
 
   <div class="category-list">
-    {% for article in articles %}
-      <article class="event-card-past">
+    {% for article in articles_page.object_list %}
+      <article class="article-card">
         <h3>
+          {% if article.eventtype %}{{article.eventtype}}: {% endif %}
           <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a>
         </h3>
         
-        <div class="item-meta">
+        <div class="article-card--meta">
           <time datetime="{{ article.date.isoformat() }}">
             {{ article.date.strftime('%d %B %Y') }}
           </time>
-          {% if article.speaker %}
+          {% if article.speaker and article.category.name|lower == 'events' %}
             <span class="meta-sep">&bull;</span>
             <span class="speaker-name">Speaker: <em>{{ article.speaker }}</em></span>
+          {% endif %}
+          {% if article.author and article.category.name|lower == 'blog' %}
+            <span class="meta-sep">&bull;</span>
+            <span class="author">Author: <em>{{ article.author }}</em></span>
           {% endif %}
         </div>
 
         {% if article.summary %}
-          <div class="item-summary">
+          <div class="article-card--summary">
             {{ article.summary }}
           </div>
         {% endif %}
       </article>
     {% else %}
-      <p class="no-posts-notice">No archived events found in this category.</p>
+      <p class="no-posts-notice">No archived posts found in this category.</p>
     {% endfor %}
   </div>
 

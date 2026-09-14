@@ -367,6 +367,48 @@ h2.page-title {
   margin-bottom: 0.5rem;
 }
 
+/* Category / events & blog archive */
+.category-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.article-card {
+  position: relative;
+  padding: 0 0 0 1.25rem;
+  width: 100%;
+  border-left: 3px solid var(--color-primary);
+}
+
+.article-card h3 {
+  margin-top: 0rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.article-card h3 a {
+  color: var(--color-accent);
+  transition: color 0.2s ease;
+}
+
+.article-card h3 a:hover {
+  color: var(--color-accent-hover);
+}
+
+.article-card--meta {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.article-card--summary p {
+  text-align: justify;
+  margin-bottom: 0;
+}
+
+
 /* ==========================================================================
    RESPONSIVE BREAKPOINTS (Mobile Optimization)
    ========================================================================== */

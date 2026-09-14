@@ -6,7 +6,7 @@
   <section class="upcoming-events">
   <!-- Iterate over the global 'articles' list and filter by Category -->
   <div class="event-list event-list--upcoming">
-      {% for article in articles if article.category.name|lower == 'events' and article.isupcoming %}
+      {% for article in articles|sort(attribute='date', reverse=False) if article.category.name|lower == 'events' and article.isupcoming %}
         <article class="event-card event-card--upcoming">
           <h3>{{article.eventtype}}: <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h3>
           
