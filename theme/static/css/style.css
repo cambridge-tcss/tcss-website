@@ -259,6 +259,20 @@ h2.page-title {
   text-align: justify;
 }
 
+.index-mailing-list {
+  display: inline-block;
+  background-color: #0056b3;
+  color: #f8fafc;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+
+
+
 /* ==========================================================================
    EVENT CARDS - Left accent line & Text format
    ========================================================================== */
