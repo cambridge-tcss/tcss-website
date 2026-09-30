@@ -46,7 +46,7 @@
 
   {% if SPONSORS %}
   <section class="sponsors" aria-labelledby="sponsors-heading">
-    <h2 id="sponsors-heading">Our Sponsors</h2>
+    <h2 id="sponsors-heading">Our Sponsor{% if SPONSORS|length != 1 %}s{% endif %}</h2>
     <ul class="sponsor-list">
       {% for sponsor in SPONSORS %}
       <li class="sponsor-list__item">
