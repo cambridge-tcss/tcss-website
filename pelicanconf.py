@@ -9,7 +9,7 @@ def load_sponsors():
     sponsors_file = Path(__file__).parent / "data" / "sponsors.csv"
     with sponsors_file.open(newline="", encoding="utf-8") as file:
         reader = csv.DictReader(file)
-        required_fields = {"name", "logo_path", "website_url"}
+        required_fields = {"name", "logo_file_name", "website_url"}
         missing_fields = required_fields.difference(reader.fieldnames or [])
         if missing_fields:
             raise ValueError(
@@ -22,16 +22,16 @@ def load_sponsors():
             if not name:
                 continue
 
-            logo_path = (row.get("logo_path") or "").strip()
-            if not logo_path:
+            logo_file_name = (row.get("logo_file_name") or "").strip()
+            if not logo_file_name:
                 raise ValueError(
-                    f"Missing logo_path for sponsor on row {row_number} of {sponsors_file}"
+                    f"Missing logo_file_name for sponsor on row {row_number} of {sponsors_file}"
                 )
 
             sponsors.append(
                 {
                     "name": name,
-                    "logo": logo_path,
+                    "logo": Path("static/sponsor_logos") / logo_file_name,
                     "url": (row.get("website_url") or "").strip(),
                 }
             )

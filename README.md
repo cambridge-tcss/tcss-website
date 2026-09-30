@@ -17,4 +17,4 @@ EventID:       # Set to any arbitrary value (e.g. quantum-talk-2026). Blog posts
 
 ## Sponsors
 
-Edit `data/sponsors.csv` to update the sponsors shown on the homepage. Add one row per sponsor using the columns `name`, `logo_path`, and `website_url`; the website URL may be left blank. Put logo files in `content/static/sponsor_logos/` and set `logo_path` to a path such as `static/images/sponsor-logo.png`. The sponsor section is hidden automatically when there are no sponsor rows.
+Edit `data/sponsors.csv` to update the sponsors shown on the homepage. Add one row per sponsor using the columns `name`, `logo_file_name`, and `website_url`; the website URL may be left blank. Put each logo in `content/static/sponsor_logos/` and enter only its filename in the CSV, for example `jane_street.png` (not the folder path). The sponsor section is hidden automatically when there are no sponsor rows.
