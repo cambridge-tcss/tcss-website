@@ -1,6 +1,43 @@
-from datetime import datetime
+import csv
+from datetime import datetime, timezone
+from pathlib import Path
+
 from pelican import signals
-from datetime import timezone
+
+
+def load_sponsors():
+    sponsors_file = Path(__file__).parent / "data" / "sponsors.csv"
+    with sponsors_file.open(newline="", encoding="utf-8") as file:
+        reader = csv.DictReader(file)
+        required_fields = {"name", "logo_path", "website_url"}
+        missing_fields = required_fields.difference(reader.fieldnames or [])
+        if missing_fields:
+            raise ValueError(
+                f"{sponsors_file} is missing CSV columns: {', '.join(sorted(missing_fields))}"
+            )
+
+        sponsors = []
+        for row_number, row in enumerate(reader, start=2):
+            name = (row.get("name") or "").strip()
+            if not name:
+                continue
+
+            logo_path = (row.get("logo_path") or "").strip()
+            if not logo_path:
+                raise ValueError(
+                    f"Missing logo_path for sponsor on row {row_number} of {sponsors_file}"
+                )
+
+            sponsors.append(
+                {
+                    "name": name,
+                    "logo": logo_path,
+                    "url": (row.get("website_url") or "").strip(),
+                }
+            )
+
+        return sponsors
+
 
 def add_event_status(generator):
     """Dynamically set article.isupcoming based on build time (UTC aware)."""
@@ -8,11 +45,11 @@ def add_event_status(generator):
 
     for article in generator.articles:
         # 1. Guard clause: Ignore non-events
-        if str(article.category).lower() != 'events':
+        if str(article.category).lower() != "events":
             continue
 
         # 2. Guard clause: Handle missing or invalid dates
-        if not (hasattr(article, 'date') and article.date):
+        if not (hasattr(article, "date") and article.date):
             article.isupcoming = False
             continue
 
@@ -24,20 +61,23 @@ def add_event_status(generator):
         # 4. Compare directly
         article.isupcoming = event_date >= now
 
+
 def register():
     signals.article_generator_finalized.connect(add_event_status)
 
+
 register()
 
-AUTHOR = 'Max Lian'
-SITENAME = 'Trinity College Science Society'
+AUTHOR = "Max Lian"
+SITENAME = "Trinity College Science Society"
 SITEURL = ""
+SPONSORS = load_sponsors()
 
 PATH = "content"
 
-TIMEZONE = 'Europe/London'
+TIMEZONE = "Europe/London"
 
-DEFAULT_LANG = 'en'
+DEFAULT_LANG = "en"
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
@@ -71,41 +111,41 @@ RELATIVE_URLS = True
 
 LOAD_CONTENT_CACHE = False  # default was True
 DELETE_OUTPUT_DIRECTORY = True  # default was False
-INDEX_SAVE_AS = 'index.html'  # default was 'index.html'
-THEME = 'theme'
+INDEX_SAVE_AS = "index.html"  # default was 'index.html'
+THEME = "theme"
 
 # ----------------------------------------------------------------------
 # URL & Directory Structure Rules
 # ----------------------------------------------------------------------
 # This determines folder structure (directory structure) in output
 
-PATH = 'content'
+PATH = "content"
 
 # Tells Pelican where to find content
-PAGE_PATHS = ['pages']
-ARTICLE_PATHS = ['events', 'blog']
-STATIC_PATHS = ['static']
+PAGE_PATHS = ["pages"]
+ARTICLE_PATHS = ["events", "blog"]
+STATIC_PATHS = ["static"]
 
 # Organize static pages into /pages/
-PAGE_URL = 'pages/{slug}.html'
-PAGE_SAVE_AS = 'pages/{slug}.html'
+PAGE_URL = "pages/{slug}.html"
+PAGE_SAVE_AS = "pages/{slug}.html"
 
 # Dynamically route articles by category (creates /events/ and /blog/ output folders)
-ARTICLE_URL = '{category}/{slug}.html'
-ARTICLE_SAVE_AS = '{category}/{slug}.html'
+ARTICLE_URL = "{category}/{slug}.html"
+ARTICLE_SAVE_AS = "{category}/{slug}.html"
 
 
-'''
+"""
 # Generate Category Archive Pages (e.g., a page listing ALL blog posts or ALL events)
 CATEGORY_URL = '{slug}/index.html'
 CATEGORY_SAVE_AS = '{slug}/index.html'
-'''
+"""
 
 
 # Disable unused auto-generated pages to keep output clean
-AUTHOR_SAVE_AS = ''
-AUTHORS_SAVE_AS = ''
-ARCHIVES_SAVE_AS = ''
-TAG_SAVE_AS = ''
-TAGS_SAVE_AS = ''
-CATEGORIES_SAVE_AS = ''  # Disables the generic multi-category overview page
+AUTHOR_SAVE_AS = ""
+AUTHORS_SAVE_AS = ""
+ARCHIVES_SAVE_AS = ""
+TAG_SAVE_AS = ""
+TAGS_SAVE_AS = ""
+CATEGORIES_SAVE_AS = ""  # Disables the generic multi-category overview page

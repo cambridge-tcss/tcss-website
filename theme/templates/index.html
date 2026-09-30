@@ -43,6 +43,21 @@
   <a class="index-mailing-list" href="https://lists.cam.ac.uk/sympa/subscribe/trin-sci-soc?previous_action=info">
     Click here to subscribe to our mailing list
   </a>
-  
+
+  {% if SPONSORS %}
+  <section class="sponsors" aria-labelledby="sponsors-heading">
+    <h2 id="sponsors-heading">Our Sponsors</h2>
+    <ul class="sponsor-list">
+      {% for sponsor in SPONSORS %}
+      <li class="sponsor-list__item">
+        {% if sponsor.url %}<a href="{{ sponsor.url }}" target="_blank" rel="noopener noreferrer">{% endif %}
+        <img class="sponsor-logo" src="{{ SITEURL }}/{{ sponsor.logo }}" alt="{{ sponsor.name }} logo">
+        <span>{{ sponsor.name }}</span>
+        {% if sponsor.url %}</a>{% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
 
 {% endblock %}

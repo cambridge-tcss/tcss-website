@@ -14,3 +14,7 @@ Date:          # **DATE MUST BE IN YYYY-MM-DD format**<br>
 Time:          # Preferably in 24 hour format<br>
 Location:      # Location <br>
 EventID:       # Set to any arbitrary value (e.g. quantum-talk-2026). Blog posts with the same EventID as<br>                     any article will be linked in the event page.<br>
+
+## Sponsors
+
+Edit `data/sponsors.csv` to update the sponsors shown on the homepage. Add one row per sponsor using the columns `name`, `logo_path`, and `website_url`; the website URL may be left blank. Put logo files in `content/static/sponsor_logos/` and set `logo_path` to a path such as `static/images/sponsor-logo.png`. The sponsor section is hidden automatically when there are no sponsor rows.
