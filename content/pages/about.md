@@ -29,6 +29,10 @@ President: Vedant Sakre
 
 Secretary: Hazel Herzog <hh638@cam.ac.uk>
 
+**Mailing List**
+
+[subscribe to our mailing list](https://lists.cam.ac.uk/sympa/subscribe/trin-sci-soc?previous_action=info)
+
 **Constitution**
 
 Download the [TCSS Constitution]({static}/static/documents/constitution2026.pdf).
