@@ -27,7 +27,7 @@
             {% if article.location %}
               {% set location_guide = pages|selectattr('title', 'equalto', article.location)|first %}
               <li><strong>Location:</strong>
-                {% if location_guide %}<a href="{{ SITEURL }}/{{ location_guide.url }}">{{ article.location }}</a>
+                {% if location_guide %}<a class="content-link" href="{{ SITEURL }}/{{ location_guide.url }}">{{ article.location }}</a>
                 {% else %}{{ article.location }}{% endif %}
               </li>
             {% endif %}
@@ -36,7 +36,7 @@
           {% if article.summary %}
             <div class="summary">{{ article.summary }}</div>
           {% endif %}
-          <a href="{{ SITEURL }}/{{ article.url }}">See more information &rarr;</a>
+          <a class="content-link" href="{{ SITEURL }}/{{ article.url }}">See more information &rarr;</a>
         </article>
       {% else %}
         <p class="empty-state">There are no upcoming events currently scheduled.</p>
@@ -48,7 +48,7 @@
     <div class="section-header">
       <h2 id="past-events-title">Past events archive</h2>
       <p>Browse a record of previous events.</p>
-      <a href="{{ SITEURL }}/category/events.html">View full archive</a>
+      <a class="content-link" href="{{ SITEURL }}/category/events.html">View full archive</a>
     </div>
 
     <div class="event-list event-list--archive">

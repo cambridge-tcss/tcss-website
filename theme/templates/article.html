@@ -39,13 +39,13 @@
     {% if matching_blogs|length > 0 %}
       <div class="event-blog-recaps">
         {% if matching_blogs|length == 1 %}
-          <p><strong>This event has a related blog post: </strong> <a href="{{ SITEURL }}/{{ matching_blogs[0].url }}">{{ matching_blogs[0].title }}</a>.</p>
+          <p><strong>This event has a related blog post: </strong> <a class="content-link" href="{{ SITEURL }}/{{ matching_blogs[0].url }}">{{ matching_blogs[0].title }}</a>.</p>
         {% else %}
           <p><strong>This event has related blog posts:</strong></p>
           <ul class="recap-list">
             {% for post in matching_blogs %}
               <li>
-                <a href="{{ SITEURL }}/{{ post.url }}">{{ post.title }}</a> 
+                <a class="content-link" href="{{ SITEURL }}/{{ post.url }}">{{ post.title }}</a>
                 <span class="recap-date">({{ post.date.strftime('%d %b %Y') }})</span>
               </li>
             {% endfor %}

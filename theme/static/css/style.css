@@ -248,6 +248,21 @@ h2.page-title {
   text-align: justify;
 }
 
+.event-content a:link,
+.event-content a:visited,
+.page-content .page-body a:link,
+.page-content .page-body a:visited,
+.summary a:link,
+.summary a:visited,
+.article-card--summary a:link,
+.article-card--summary a:visited,
+.content-link:link,
+.content-link:visited {
+  color: var(--color-accent);
+  text-decoration: underline;
+  font-weight: 500;
+}
+
 .about-tcss {
   margin-top: 1rem;
   margin-bottom: 1rem;
