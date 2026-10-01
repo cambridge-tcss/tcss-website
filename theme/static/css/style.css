@@ -413,12 +413,26 @@ so the gap below the page title on location guide page looks consistent */
   transition: border-color 0.2s ease, transform 0.2s ease; /* Smoothly animates color and movement without touching the text */
 }
 
-/* Hover interaction */
-/* Shift the entire bracket slightly to the left (or right) and change color */
-.event-card--upcoming:hover::before,
-.event-card--upcoming:hover::after {
-  border-color: var(--color-accent);
-  transform: translateX(-0.30rem); /* Nudges the entire [ bracket outward */
+@media (min-width: 769px) {
+  /* Shift the entire bracket slightly outward and change color on hover. */
+  .event-card--upcoming:hover::before,
+  .event-card--upcoming:hover::after {
+    border-color: var(--color-accent);
+    transform: translateX(-0.30rem);
+  }
+}
+
+@media (max-width: 768px) {
+  .event-card--upcoming::before,
+  .event-card--upcoming::after {
+    transition: border-color 0.4s ease, transform 0.4s ease;
+  }
+
+  .event-card--upcoming.animated::before,
+  .event-card--upcoming.animated::after {
+    border-color: var(--color-accent);
+    transform: translateX(-0.30rem);
+  }
 }
 
 /* Card Typography & Links */
