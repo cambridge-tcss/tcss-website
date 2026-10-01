@@ -24,7 +24,13 @@
             {% if article.date %}<li><strong>Date:</strong> {{ article.date.strftime('%A, %d %B %Y') }}</li>{% endif %}
             {% if article.time %}<li><strong>Time:</strong> {{ article.time }}</li>{% endif %}
             {% if article.speaker %}<li><strong>Speaker:</strong> {{ article.speaker }}</li>{% endif %}
-            {% if article.location %}<li><strong>Location:</strong> {{ article.location }}</li>{% endif %}
+            {% if article.location %}
+              {% set location_guide = pages|selectattr('title', 'equalto', article.location)|first %}
+              <li><strong>Location:</strong>
+                {% if location_guide %}<a href="{{ SITEURL }}/{{ location_guide.url }}">{{ article.location }}</a>
+                {% else %}{{ article.location }}{% endif %}
+              </li>
+            {% endif %}
           </ul>
 
           {% if article.summary %}

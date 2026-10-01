@@ -261,6 +261,31 @@ h2.page-title {
 
 .page-content .page-body p {
   text-align: justify;
+  margin-bottom: 1rem;
+}
+
+.page-content .page-body h2 {
+  margin: 1.25rem 0 0.5rem;
+}
+
+/* Removes the extra top margin from the first section heading,
+so the gap below the page title on location guide page looks consistent */
+.page-content .page-body > h2:first-child {
+  margin-top: 0;
+}
+
+.page-content .page-body ol,
+.page-content .page-body ul {
+  margin: 0 0 1rem;
+  padding-left: 1.5rem;
+}
+
+.page-content .page-body li + li {
+  margin-top: 0.4rem;
+}
+
+.page-content .page-body hr {
+  margin: 1rem 0;
 }
 
 .index-mailing-list {
