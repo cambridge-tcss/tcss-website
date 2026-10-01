@@ -5,11 +5,13 @@ Status: published
 
 ## Location Details
 
-**Venue:** Pfizer Lecture Theatre <br>
-**Building:** Department of Chemistry (Main Building) <br>
-**Address:** Lensfield Road, Cambridge, CB2 1EW <br>
-**What3Words:** [`///valve.cost.arts`](https://what3words.com/valve.cost.arts) <br>
-**Accessibility Guide:** [AccessAble Page](https://www.accessable.co.uk/university-of-cambridge/trumpington-street-and-lensfield-road/access-guides/pfizer-lecture-theatre#BAE60A0D-BDB8-0446-B412-1A86F567AE85) <br>
+<p class="location-details">
+<strong>Venue:</strong> Pfizer Lecture Theatre<br>
+<strong>Building:</strong> Department of Chemistry (Main Building)<br>
+<strong>Address:</strong> Lensfield Road, Cambridge, CB2 1EW<br>
+<strong>What3Words:</strong> <a href="https://what3words.com/valve.cost.arts"><code>///valve.cost.arts</code></a><br>
+<strong>Accessibility Guide:</strong> <a href="https://www.accessable.co.uk/university-of-cambridge/trumpington-street-and-lensfield-road/access-guides/pfizer-lecture-theatre#BAE60A0D-BDB8-0446-B412-1A86F567AE85">AccessAble Page</a>
+</p>
 
 ## How to Get Here
 

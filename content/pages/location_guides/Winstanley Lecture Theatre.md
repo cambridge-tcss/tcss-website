@@ -5,12 +5,14 @@ Status: published
 
 ## Location Details
 
-**Venue:** Winstanley Lecture Theatre (Blue Boar Court) <br>
-**College:** Trinity College (**Do not enter via Great Gate or Green Street!**) <br>
-**Entrance Point:** Whewell's Court Gate, St John's Street (by the red post box) <br>
-**What3Words (Entrance):** [`///body.theme.toys`](https://what3words.com/body.theme.toys) <br>
-**What3Words (Venue):** [`///bend.finds.sang`](https://what3words.com/bend.finds.sang) <br>
-**Accessibility:** Contact <admissions@trin.cam.ac.uk> for step-free access requirements. <br>
+<p class="location-details">
+<strong>Venue:</strong> Winstanley Lecture Theatre (Blue Boar Court)<br>
+<strong>College:</strong> Trinity College (<em>Do not enter via Great Gate or Green Street!</em>)<br>
+<strong>Site Entrance:</strong> Whewell's Court Gate, Trinity Street (by the red post box)<br>
+<strong>What3Words (Entrance):</strong> <a href="https://what3words.com/body.theme.toys"><code>///body.theme.toys</code></a><br>
+<strong>What3Words (Venue):</strong> <a href="https://what3words.com/bend.finds.sang"><code>///bend.finds.sang</code></a><br>
+<strong>Accessibility:</strong> Contact <a href="mailto:admissions@trin.cam.ac.uk">admissions@trin.cam.ac.uk</a> for step-free access requirements.
+</p>
 
 ## How to Get Here
 
@@ -21,7 +23,8 @@ Status: published
     * Late Arrivals: If you arrive after the door steward has left, please report to the Porters' Lodge at Trinity College Great Gate for assistance.
 2. **Courtyard Passage:** Once through the gate, walk down the entrance archway past Staircase A (*do not go up Staircase A*). Take the staircase on your right behind the archway.
 3. **To the Theatre:** Follow the signs for **"Blue Boar / Winstanley Lecture Hall"**. Turn **RIGHT** into Blue Boar Court at the spot in the photo below—the entrance to the Winstanley Lecture Theatre will be on your left. Continue straight down the hallway into the venue.
-![TCSS LOGO]({static}/static/images/WLT-Guide-1.png)
+
+![Turn Right into Blue Boar Court for Winstanley Lecture Theatre at Junction]({static}/static/images/WLT-guide-1.png)
 
 ## Interactive Map (Meeting Point)
 
