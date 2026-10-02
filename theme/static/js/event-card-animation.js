@@ -16,10 +16,10 @@ function updateEventCardObserver() {
   eventCardObserver = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
-        entry.target.classList.toggle("animated", entry.intersectionRatio >= 0.80);
+        entry.target.classList.toggle("animated", entry.intersectionRatio >= 0.90);
       });
     },
-    { threshold: 0.80 }
+    { threshold: 0.90 }
   );
 
   eventCards.forEach((card) => eventCardObserver.observe(card));
