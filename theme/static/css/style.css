@@ -263,6 +263,14 @@ h2.page-title {
   font-weight: 500;
 }
 
+.event-content a:hover,
+.page-content .page-body a:hover,
+.summary a:hover,
+.article-card--summary a:hover,
+.content-link:hover {
+  color: var(--color-accent-hover);
+}
+
 .about-tcss {
   margin-top: 1rem;
   margin-bottom: 1rem;
