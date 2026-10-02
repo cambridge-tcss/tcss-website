@@ -105,6 +105,15 @@ DEFAULT_PAGINATION = 10
 # Uncomment following line if you want document-relative URLs when developing
 RELATIVE_URLS = True
 
+# Generate site map
+PLUGINS = ["sitemap"]
+
+SITEMAP = {
+    "format": "xml",
+    "priorities": {"articles": 0.7, "indexes": 0.5, "pages": 0.9},
+    "changefreqs": {"articles": "monthly", "indexes": "daily", "pages": "monthly"},
+}
+
 # ----------------------------------------------------------------------
 # Additional settings by Max following Al Sweigart's blog
 # https://inventwithpython.com/blog/pelican-tutorial.html#:~:text=(%20Y%2Fn)%20Y%20%3E%20Do%20you%20want,your%20website%20using%20Rackspace%20Cloud%20Files%3F%20(
