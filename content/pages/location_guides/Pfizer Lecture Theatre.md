@@ -15,7 +15,7 @@ Status: published
 
 ## How to Get Here
 
-1. **Main Entrance:** Enter the front car park/bike rack area off **Lensfield Road** to reach the main glass entrance doors. *(You may use the link in the map below to navigate to this entrance)*
+1. **Main Entrance:** Enter the front car park/bike rack area off **Lensfield Road** to reach the main glass entrance doors. *(You may use the link in the map below to navigate to this entrance. It is NOT the entrance next to the Polar Museum!)*
 2. **Reception:** Pass through the main doors into the ground-floor foyer.
 3. **To the Theatre:** The Pfizer Lecture Theatre is located directly on your **left** along the main back wall facing you as you enter.
 
