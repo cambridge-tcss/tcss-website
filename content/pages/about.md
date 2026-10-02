@@ -35,4 +35,4 @@ Secretary: Hazel Herzog <hh638@cam.ac.uk>
 
 **Constitution**
 
-Download the [TCSS Constitution]({static}/static/documents/constitution2026.pdf).
+Download the [TCSS Constitution]({static}/static/documents/constitution2026.pdf)
