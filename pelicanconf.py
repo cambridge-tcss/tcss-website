@@ -39,6 +39,46 @@ def load_sponsors():
         return sponsors
 
 
+def load_social_links():
+    social_links_file = Path(__file__).parent / "data" / "social_links.csv"
+    with social_links_file.open(newline="", encoding="utf-8") as file:
+        reader = csv.DictReader(file)
+        required_fields = {"name", "icon_file_name", "url"}
+        missing_fields = required_fields.difference(reader.fieldnames or [])
+        if missing_fields:
+            raise ValueError(
+                f"{social_links_file} is missing CSV columns: {', '.join(sorted(missing_fields))}"
+            )
+
+        social_links = []
+        for row_number, row in enumerate(reader, start=2):
+            name = (row.get("name") or "").strip()
+            if not name:
+                continue
+
+            url = (row.get("url") or "").strip()
+            if not url:
+                raise ValueError(
+                    f"Missing url for social link on row {row_number} of {social_links_file}"
+                )
+
+            icon_file_name = (row.get("icon_file_name") or "").strip()
+            if not icon_file_name:
+                raise ValueError(
+                    f"Missing icon_file_name for social link on row {row_number} of {social_links_file}"
+                )
+
+            social_links.append(
+                {
+                    "name": name,
+                    "icon": Path("static/social_logos") / icon_file_name,
+                    "url": url,
+                }
+            )
+
+        return social_links
+
+
 def add_event_status(generator):
     """Dynamically set article.isupcoming based on build time (UTC aware)."""
     now = datetime.now(timezone.utc)
@@ -72,6 +112,7 @@ AUTHOR = "Max Lian"
 SITENAME = "Trinity College Science Society"
 SITEURL = ""
 SPONSORS = load_sponsors()
+SOCIAL_LINKS = load_social_links()
 
 PATH = "content"
 

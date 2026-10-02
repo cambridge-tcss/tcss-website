@@ -52,6 +52,13 @@
     <div class="footer-container">
       <p>&copy; {{ CURRENT_YEAR|default('2026') }} Trinity College Science Society. Hosted on the <a href="https://www.srcf.net" target="_blank" rel="noopener">SRCF</a>.</p>
       <p><small>Trinity College, Cambridge, CB2 1TQ</small></p>
+      {% if SOCIAL_LINKS %}
+      <ul class="footer-social-links" aria-label="Social media">
+        {% for social_link in SOCIAL_LINKS %}
+        <li><a href="{{ social_link.url }}" aria-label="{{ social_link.name }}" target="_blank" rel="noopener noreferrer"><img src="{{ SITEURL }}/{{ social_link.icon }}" alt=""></a></li>
+        {% endfor %}
+      </ul>
+      {% endif %}
     </div>
   </footer>
   <script src="{{ SITEURL }}/theme/js/event-card-animation.js" defer></script>

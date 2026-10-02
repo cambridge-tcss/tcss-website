@@ -18,3 +18,7 @@ EventID:       # Set to any arbitrary value (e.g. quantum-talk-2026). Blog posts
 ## Sponsors
 
 Edit `data/sponsors.csv` to update the sponsors shown on the homepage. Add one row per sponsor using the columns `name`, `logo_file_name`, and `website_url`; the website URL may be left blank. Put each logo in `content/static/sponsor_logos/` and enter only its filename in the CSV, for example `jane_street.png` (not the folder path). The sponsor section is hidden automatically when there are no sponsor rows.
+
+## Social Media
+
+Edit `data/social_links.csv` to update the social media icons shown in the site footer. Add one row per account using the columns `name`, `icon_file_name`, and `url`. Put each icon in `content/static/social_logos/` and enter only its filename in the CSV. The section is hidden automatically when there are no social link rows.
