@@ -295,7 +295,7 @@ so the gap below the page title on location guide page looks consistent */
 
 .page-content .page-body ol,
 .page-content .page-body ul {
-  margin: 0 0 1rem;
+  margin: 0.8rem 0 0.8rem;
   padding-left: 1.5rem;
 }
 
