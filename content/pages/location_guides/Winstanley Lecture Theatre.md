@@ -18,7 +18,7 @@ Status: published
 
 > **Note:** Standard navigation apps (like Google Maps) often direct visitors to a locked gate by a bin area. Please follow these specific pedestrian instructions instead.
 
-1. **Meeting Point (Whewell's Court Gate):** Locate the **red post box** opposite Trinity College Great Gate. Enter via the **Whewell's Court Gate** right beside the post box. 
+1. **Meeting Point (Whewell's Court Gate):** Locate the **red post box** opposite Trinity College Great Gate (and Newton's Apple Tree). Enter via the **Whewell's Court Gate** right beside the post box. 
     * A TCSS committee member will be posted at this gate prior to the event to assist non-Trinity members with access.
     * Late Arrivals: If you arrive after the door steward has left, please report to the Porters' Lodge at Trinity College Great Gate for assistance.
 2. **Courtyard Passage:** Once through the gate, walk down the entrance archway past Staircase A (*do not go up Staircase A*). Take the staircase on your right behind the archway.
