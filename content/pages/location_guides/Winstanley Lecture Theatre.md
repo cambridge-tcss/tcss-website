@@ -20,7 +20,7 @@ Status: published
 
 1. **Meeting Point (Whewell's Court Gate):** Locate the **red post box** opposite Trinity College Great Gate (and Newton's Apple Tree). Enter via the **Whewell's Court Gate** right beside the post box. 
     * A TCSS committee member will be posted at this gate prior to the event to assist non-Trinity members with access.
-    * Late Arrivals: If you arrive after the door steward has left, please report to the Porters' Lodge at Trinity College Great Gate for assistance.
+    * Late Arrivals: If you arrive after the door steward has left and do not have door access, please report to the Porters' Lodge at Trinity College Great Gate for assistance.
 2. **Courtyard Passage:** Once through the gate, walk down the entrance archway past Staircase A (*do not go up Staircase A*). Take the staircase on your right behind the archway.
 3. **To the Theatre:** Follow the signs for **"Blue Boar / Winstanley Lecture Hall"**. Turn **RIGHT** into Blue Boar Court at the spot in the photo below—the entrance to the Winstanley Lecture Theatre will be on your left. Continue straight down the hallway into the venue.
 
