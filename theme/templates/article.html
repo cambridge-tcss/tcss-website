@@ -20,7 +20,11 @@
       {% endif %}
 
       {% if article.location %}
-        <li><strong>Location:</strong> {{ article.location }}</li>
+        {% set location_guide = pages|selectattr('title', 'equalto', article.location)|first %}
+        <li><strong>Location:</strong>
+          {% if location_guide %}<a class="content-link" href="{{ SITEURL }}/{{ location_guide.url }}">{{ article.location }}</a>
+          {% else %}{{ article.location }}{% endif %}
+        </li>
       {% endif %}
 
       {% if article.author and article.category.name|lower == 'blog'%}
