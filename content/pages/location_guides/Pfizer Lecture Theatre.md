@@ -7,7 +7,7 @@ Status: published
 
 <p class="location-details">
 <strong>Venue:</strong> Pfizer Lecture Theatre<br>
-<strong>Building:</strong> Department of Chemistry (Main Building)<br>
+<strong>Building:</strong> Yusuf Hamied Department of Chemistry<br>
 <strong>Address:</strong> Lensfield Road, Cambridge, CB2 1EW<br>
 <strong>What3Words (Building Entrance):</strong> <a href="https://what3words.com/valve.cost.arts"><code>///valve.cost.arts</code></a><br>
 <strong>Accessibility Guide:</strong> <a href="https://www.accessable.co.uk/university-of-cambridge/trumpington-street-and-lensfield-road/access-guides/pfizer-lecture-theatre#BAE60A0D-BDB8-0446-B412-1A86F567AE85">AccessAble Page</a>
