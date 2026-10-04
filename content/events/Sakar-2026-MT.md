@@ -3,7 +3,7 @@ EventType: Talk
 Speaker: Subir Sarkar
 Status: published
 Date: 2026-10-09
-Time: 18:30
+Time: 18:30-19:30
 Location: Pfizer Lecture Theatre
 EventID: Sakar-2026-MT
 

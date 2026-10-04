@@ -3,7 +3,7 @@ EventType: Talk
 Speaker: Gillian Forrester
 Status: published
 Date: 2026-10-23
-Time: 18:30
+Time: 18:30-19:30
 Location: Winstanley Lecture Theatre
 EventID: Forrester-2026-MT
 

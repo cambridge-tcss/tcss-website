@@ -3,7 +3,7 @@ EventType: Talk
 Speaker: Harry L. Anderson
 Status: published
 Date: 2026-11-06
-Time: 18:30
+Time: 18:30-19:30
 Location: To be confirmed
 EventID: Anderson-2026-MT
 
