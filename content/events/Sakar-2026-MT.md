@@ -3,9 +3,9 @@ EventType: Talk
 Speaker: Subir Sarkar
 Status: published
 Date: 2026-10-09
-Time: 18:00
+Time: 18:30
 Location: Pfizer Lecture Theatre
-EventID: dark-energy-2026
+EventID: Sakar-2026-MT
 
 Following Einstein’s 1916 formulation of the general theory of relativity, the Friedmann–Lemaître–Robertson–Walker (FLRW) world models were constructed adopting the 'Cosmological Principle' - that the Universe is isotropic and homogeneous on large scales. The subsequent discovery of the Hubble expansion and the cosmic microwave background established that the Universe had a hot, dense past — the Big Bang. More recently, the observation that the Hubble expansion rate is accelerating has led to today’s standard ΛCDM model, dominated by a Cosmological Constant Λ (or more general 'dark energy’) and (cold) dark matter.  We discuss how this stands up to recent observational tests. That the CMB has a prominent dipole anisotropy is interpreted as arising from our 'peculiar' (non-Hubble) motion induced by local inhomogeneity. A corresponding dipole is then expected in the sky map of distant sources. Using catalogues of radio galaxies & quasars, the matter dipole is found however to have an amplitude 2-3 times bigger than expected, i.e. the matter distribution is not isotropic in the 'CMB frame’. This calls into question all cosmological analyses, e.g. of weak gravitaional lensing or baryon acoustic oscillations, which assume the FLRW metric to infer  that the Universe is dominated by dark energy arising from the quantum vacuum. Even the acceleration of the expansion rate indicated by the Hubble diagram of Type Ia supernovae is found to be anisotropic and local, so cannot be due to the quantum vacuum but is likely an effect of the local peculiar bulk flow. We must begin again to construct a model of the Universe, guided by observations rather than by a philosophical principle.
 
