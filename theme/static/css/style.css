@@ -497,6 +497,13 @@ so the gap below the page title on location guide page looks consistent */
   }
 }
 
+/* Keep today's event bracket neon green, including during hover/animation. */
+.event-card--upcoming.event-card--istoday::before,
+.event-card--upcoming.event-card--istoday::after {
+  border-color: #39ff14;
+  transform: translateX(-0.30rem);
+}
+
 /* Card Typography & Links */
 .event-card--upcoming h3 {
   margin-top: 0;

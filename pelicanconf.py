@@ -91,6 +91,7 @@ def add_event_status(generator):
         # 2. Guard clause: Handle missing or invalid dates
         if not (hasattr(article, "date") and article.date):
             article.isupcoming = False
+            article.istoday = False
             continue
 
         # 3. Ensure event date is timezone-aware for comparison
@@ -98,8 +99,10 @@ def add_event_status(generator):
         if event_date.tzinfo is None:
             event_date = event_date.replace(tzinfo=timezone.utc)
 
-        # 4. Compare directly
-        article.isupcoming = event_date >= now
+        # Compare dates in the event's timezone so date-only events stay upcoming all day.
+        today = now.astimezone(event_date.tzinfo).date()
+        article.isupcoming = event_date.date() >= today
+        article.istoday = event_date.date() == today
 
 
 def register():

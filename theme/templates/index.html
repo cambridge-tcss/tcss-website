@@ -7,7 +7,10 @@
   <!-- Iterate over the global 'articles' list and filter by Category -->
   <div class="event-list event-list--upcoming">
       {% for article in articles|sort(attribute='date', reverse=False) if article.category.name|lower == 'events' and article.isupcoming %}
-        <article class="event-card event-card--upcoming">
+        <article class="event-card event-card--upcoming{% if article.istoday %} event-card--istoday{% endif %}">
+
+          <h3>{% if article.istoday %}🔥 TODAY 🔥{% endif %}</h3>
+
           <h3>{{article.eventtype}}: <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h3>
           
           <ul class="event-details">
