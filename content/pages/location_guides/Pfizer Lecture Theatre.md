@@ -22,7 +22,7 @@ Status: published
 ## Interactive Map
 
 <iframe 
-  src="https://maps.google.com/maps?q=Department+of+Chemistry,+University+of+Cambridge,+Lensfield+Road&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+  src="https://maps.google.com/maps?q=Department+of+Chemistry,+University+of+Cambridge,+Lensfield+Road&t=k&z=16&ie=UTF8&iwloc=&output=embed" 
   width="100%" 
   height="400" 
   style="border:0; border-radius: 8px;" 
