@@ -13,6 +13,9 @@
   --color-white: #ffffff;
   --color-border: #e2e8f0;
 
+  /* Live / Today Badge Variations */
+  --color-accent-vivid: #00A2FF;                       /* Glowing Cyan */
+
   /* Typography & Layout */
   /* Use native system font*/
   --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
@@ -500,7 +503,7 @@ so the gap below the page title on location guide page looks consistent */
 /* Keep today's event bracket neon green, including during hover/animation. */
 .event-card--upcoming.event-card--istoday::before,
 .event-card--upcoming.event-card--istoday::after {
-  border-color: #39ff14;
+  border-color: var(--color-accent-vivid);
   transform: translateX(-0.30rem);
 }
 
