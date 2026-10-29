@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="events-page">
+  <header class="page-header">
+    <h1 class="page-title">Event information</h1>
+  </header>
+
+  <section class="events-section" aria-labelledby="future-events-title">
+    <div class="section-header">
+      <h2 id="future-events-title">Future events</h2>
+      <p>View events planned in the future (nearest-first).
+      </p>
+    </div>
+    
+    <div class="upcoming-events event-list event-list--upcoming">
+      {% for article in articles|sort(attribute='date', reverse=False) if article.category.name|lower == 'events' and article.isupcoming %}
+        <article class="event-card event-card--upcoming">
+          <h3>{% if article.eventtype %}{{article.eventtype}}: {% endif %}
+            <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a>
+          </h3>
+
+          <ul class="event-details">
+            {% if article.date %}<li><strong>Date:</strong> {{ article.date.strftime('%A, %d %B %Y') }}</li>{% endif %}
+            {% if article.time %}<li><strong>Time:</strong> {{ article.time }}</li>{% endif %}
+            {% if article.speaker %}<li><strong>Speaker:</strong> {{ article.speaker }}</li>{% endif %}
+            {% if article.location %}
+              {% set location_guide = pages|selectattr('title', 'equalto', article.location)|first %}
+              <li><strong>Location:</strong>
+                {% if location_guide %}<a class="content-link" href="{{ SITEURL }}/{{ location_guide.url }}">{{ article.location }}</a>
+                {% else %}{{ article.location }}{% endif %}
+              </li>
+            {% endif %}
+          </ul>
+
+          {% if article.summary %}
+            <div class="summary">{{ article.summary }}</div>
+          {% endif %}
+          <a class="content-link" href="{{ SITEURL }}/{{ article.url }}">See more information &rarr;</a>
+        </article>
+      {% else %}
+        <p class="empty-state">There are no upcoming events currently scheduled.</p>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="events-section" aria-labelledby="past-events-title">
+    <div class="section-header">
+      <h2 id="past-events-title">Past events archive</h2>
+      <p>Browse a record of previous events.</p>
+      <a class="content-link" href="{{ SITEURL }}/category/events.html">View full archive</a>
+    </div>
+
+    <div class="event-list event-list--archive">
+      {% set recent_event_count = 0 %}
+      {% for article in articles|sort(attribute='date', reverse=True) if article.category.name|lower == 'events' and not article.isupcoming %}
+        {% if recent_event_count < 5 %}
+          {% set recent_event_count = recent_event_count + 1 %}
+          <article class="event-card event-card--past">
+            <h3>{{article.eventtype}}: <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h3>
+            <p class="past-meta">
+              <time datetime="{{ article.date.isoformat() }}">{{ article.date.strftime('%d %B %Y') }}</time>
+              {% if article.speaker %} — <em>{{ article.speaker }}</em>{% endif %}
+            </p>
+          </article>
+        {% endif %}
+        {% else %}
+          <p>No past events recorded yet.</p>
+      {% endfor %}
+    </div>
+  </section>
+</section>
+{% endblock %}

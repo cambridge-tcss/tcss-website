@@ -1,0 +1,14 @@
+.vscode/
+
+# Pelican generated output
+output/
+__pycache__/
+*.pyc
+
+# Virtual environment (if using one)
+env/
+venv/
+.venv/
+
+# macOS system metadata
+.DS_Store

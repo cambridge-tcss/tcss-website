@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <article class="event-detail">
+    <h2 class = "page-title">{% if article.category.name|lower == 'events' %}{{article.eventtype}}: {% endif %}{{ article.title }}</h2>
+
+    <div class="event-meta">
+      <!-- Date is standard, but good to keep wrapped cleanly -->
+      {% if article.date %}
+        <li><strong>Date:</strong> {{ article.date.strftime('%d %B %Y') }}</li>
+      {% endif %}
+
+      <!-- Custom metadata fields checked before rendering -->
+      {% if article.time %}
+        <li><strong>Time:</strong> {{ article.time }}</li>
+      {% endif %}
+
+      {% if article.speaker %}
+        <li><strong>Speaker:</strong> {{ article.speaker }}</li>
+      {% endif %}
+
+      {% if article.location %}
+        {% set location_guide = pages|selectattr('title', 'equalto', article.location)|first %}
+        <li><strong>Location:</strong>
+          {% if location_guide %}<a class="content-link" href="{{ SITEURL }}/{{ location_guide.url }}">{{ article.location }}</a>
+          {% else %}{{ article.location }}{% endif %}
+        </li>
+      {% endif %}
+
+      {% if article.author and article.category.name|lower == 'blog'%}
+        <li><strong>Author:</strong> {{ article.author }}</li>
+      {% endif %}
+    </div>
+
+    <div class="event-content">
+      {{ article.content }}
+    </div>
+
+    <!-- Event Recap Embed Block (blog post link) -->
+  {% if article.category.name|lower == 'events' and article.eventid %}
+    {% set matching_blogs = articles | selectattr('category.name', 'equalto', 'blog') | selectattr('eventid', 'defined') | selectattr('eventid', 'equalto', article.eventid) | list %}
+    
+    {% if matching_blogs|length > 0 %}
+      <div class="event-blog-recaps">
+        {% if matching_blogs|length == 1 %}
+          <p><strong>This event has a related blog post: </strong> <a class="content-link" href="{{ SITEURL }}/{{ matching_blogs[0].url }}">{{ matching_blogs[0].title }}</a>.</p>
+        {% else %}
+          <p><strong>This event has related blog posts:</strong></p>
+          <ul class="recap-list">
+            {% for post in matching_blogs %}
+              <li>
+                <a class="content-link" href="{{ SITEURL }}/{{ post.url }}">{{ post.title }}</a>
+                <span class="recap-date">({{ post.date.strftime('%d %b %Y') }})</span>
+              </li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      </div>
+    {% endif %}
+  {% endif %}
+
+  </article>
+{% endblock %}

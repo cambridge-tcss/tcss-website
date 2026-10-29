@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+  <h2 class = "page-title">Upcoming Talks & Events</h2>
+  <section class="upcoming-events">
+  <!-- Iterate over the global 'articles' list and filter by Category -->
+  <div class="event-list event-list--upcoming">
+      {% for article in articles|sort(attribute='date', reverse=False) if article.category.name|lower == 'events' and article.isupcoming %}
+        <article class="event-card event-card--upcoming{% if article.istoday %} event-card--istoday{% endif %}">
+
+          <h3>{% if article.istoday %}🔥 TODAY 🔥{% endif %}</h3>
+
+          <h3>{{article.eventtype}}: <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h3>
+          
+          <ul class="event-details">
+            {% if article.date %}<li><strong>Date:</strong> {{ article.date.strftime('%A, %d %B %Y') }}</li>{% endif %}
+            {% if article.time %}<li><strong>Time:</strong> {{ article.time }}</li>{% endif %}
+            {% if article.speaker %}<li><strong>Speaker:</strong> {{ article.speaker }}</li>{% endif %}
+            {% if article.location %}
+              {% set location_guide = pages|selectattr('title', 'equalto', article.location)|first %}
+              <li><strong>Location:</strong>
+                {% if location_guide %}<a class="content-link" href="{{ SITEURL }}/{{ location_guide.url }}">{{ article.location }}</a>
+                {% else %}{{ article.location }}{% endif %}
+              </li>
+            {% endif %}
+          </ul>
+
+          {% if article.summary %}
+            <div class="summary">{{ article.summary }}</div>
+          {% endif %}
+          <a class="content-link" href="{{ SITEURL }}/{{ article.url }}">See more information &rarr;</a>
+        </article>
+      {% else %}
+        <p class="empty-state">There are no upcoming events currently scheduled.</p>
+      {% endfor %}
+    </div>
+
+  <hr class="section-divider">
+  </section>
+
+  <section class="about-tcss">
+  <h2>About TCSS</h2>
+  <p>
+    Trinity College Science Society is the most active science society in Cambridge,
+    providing a rich programme of talks, panel discussions, quiz nights, and other social events. 
+    While based in Trinity College, all talks are free and open to all members of the university and the general public, 
+    and are accompanied by generous refreshments.
+    <a class="content-link" href="{{ SITEURL }}/pages/about-us.html"> More about TCSS &rarr;</a>
+  </p>
+  </section>
+  <a class="index-mailing-list" href="https://lists.cam.ac.uk/sympa/subscribe/trin-sci-soc?previous_action=info">
+    Click here to sign up for our mailing list
+  </a>
+
+  {% if SPONSORS %}
+  <section class="sponsors" aria-labelledby="sponsors-heading">
+    <h2 id="sponsors-heading">Our Sponsor{% if SPONSORS|length != 1 %}s{% endif %}</h2>
+    <ul class="sponsor-list">
+      {% for sponsor in SPONSORS %}
+      <li class="sponsor-list__item">
+        {% if sponsor.url %}<a href="{{ sponsor.url }}" target="_blank" rel="noopener noreferrer">{% endif %}
+        <img class="sponsor-logo" src="{{ SITEURL }}/{{ sponsor.logo }}" alt="{{ sponsor.name }} logo">
+        <span>{{ sponsor.name }}</span>
+        {% if sponsor.url %}</a>{% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+
+{% endblock %}

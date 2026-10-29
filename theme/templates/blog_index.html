@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="blog-page">
+
+  <!-- Perhaps define a new class for page title-->
+    <h2 class="page-title">Society Blog & Recaps</h2>
+    <p>Read event write-ups, student articles, and society announcements.</p>
+
+  <div class="blog-feed">
+    {% for article in articles if article.category.name|lower == 'blog' %}
+      <article class="blog-summary-card">
+        <h3><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h3>
+        
+        <p class="blog-meta">
+          <time datetime="{{ article.date.isoformat() }}">
+            {{ article.date.strftime('%d %B %Y') }}
+          </time>
+          {% if article.author %}
+            — By <em> {{ article.author }}</em>
+          {% endif %}
+        </p>
+
+        {% if article.summary %}
+          <div class="summary">
+            {{ article.summary }}
+          </div>
+        {% endif %}
+
+        <p class="read-more">
+          <a class="content-link" href="{{ SITEURL }}/{{ article.url }}">Read full post &rarr;</a>
+        </p>
+      </article>
+    {% else %}
+      <p>No blog posts published yet. Check back soon!</p>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}
