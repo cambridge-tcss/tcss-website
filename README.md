@@ -22,3 +22,6 @@ Edit `data/sponsors.csv` to update the sponsors shown on the homepage. Add one r
 ## Social Media
 
 Edit `data/social_links.csv` to update the social media icons shown in the site footer. Add one row per account using the columns `name`, `icon_file_name`, and `url`. Put each icon in `content/static/social_logos/` and enter only its filename in the CSV. The section is hidden automatically when there are no social link rows.
+
+## Reverse Proxy
+If tcss.soc.srcf.net ever drops its reverse proxy, SSH into shell.srcf.net, open /public/societies/tcss/.htaccess, and paste the contents of srcf.htaccess.

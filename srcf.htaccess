@@ -1,0 +1,30 @@
+# ==============================================================================
+# TCSS SRCF Reverse Proxy Configuration for GitHub Pages
+# ==============================================================================
+
+RewriteEngine On
+
+# ------------------------------------------------------------------------------
+# 1. Force HTTPS
+# Redirect HTTP traffic to HTTPS on tcss.soc.srcf.net
+# ------------------------------------------------------------------------------
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://tcss.soc.srcf.net/$1 [R=301,L]
+
+# ------------------------------------------------------------------------------
+# 2. Proxy requests to GitHub Pages
+# ------------------------------------------------------------------------------
+
+# Pass Authorization headers through to the backend (required for Decap CMS / Git APIs if proxied)
+SetEnvIf Authorization "(.*)" HTTP_AUTHORIZATION=$1
+
+# Proxy all incoming traffic transparently
+RewriteCond %{HTTP_HOST} ^tcss\.soc\.srcf\.net$ [NC]
+RewriteRule ^(.*)$ https://cambridge-tcss.github.io/tcss-website/$1 [P,L]
+
+# ------------------------------------------------------------------------------
+# 3. Fallback Error Handling
+# In case the GitHub Pages origin server returns an error or is unreachable
+# ------------------------------------------------------------------------------
+ErrorDocument 502 "TCSS Website is currently undergoing maintenance. Please check back shortly."
+ErrorDocument 503 "TCSS Website is currently undergoing maintenance. Please check back shortly."
