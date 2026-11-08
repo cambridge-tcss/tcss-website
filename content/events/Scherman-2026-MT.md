@@ -14,5 +14,6 @@ This talk follows our exploration of cucurbituril, a molecular host capable of b
 Alongside these developments, we have continued to ask fundamental questions about the interactions themselves, developing optical approaches to examine supramolecular complexes at the single-molecule level. I will also describe an unexpected diversion into electrolytes for redox flow batteries and the formation of a spin-out company. Throughout, the story highlights the role of collaboration, the value of following interesting results, and the sometimes unpredictable relationship between fundamental chemistry and useful technologies.
 
 **Speaker information**
+
 Professor Oren A. Scherman
 Director of Melville Laboratory for Polymer Synthesis, Yusuf Hamied Department of Chemistry, University of Cambridge, Lensfield Road CB2 1EW.
