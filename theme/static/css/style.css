@@ -269,6 +269,7 @@ h2 {
 h2.page-title {
   font-size: 2rem;
   margin-bottom: 0.5rem;
+  line-height: 2.3rem;
 }
 
 /* Event article page format */
