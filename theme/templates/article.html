@@ -27,6 +27,8 @@
         </li>
       {% endif %}
 
+      {% if article.note %}<li><strong>Note:</strong> {{ article.note }}</li>{% endif %}
+
       {% if article.author and article.category.name|lower == 'blog'%}
         <li><strong>Author:</strong> {{ article.author }}</li>
       {% endif %}

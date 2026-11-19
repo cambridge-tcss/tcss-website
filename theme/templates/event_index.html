@@ -31,6 +31,7 @@
                 {% else %}{{ article.location }}{% endif %}
               </li>
             {% endif %}
+            {% if article.note %}<li><strong>Note:</strong> {{ article.note }}</li>{% endif %}
           </ul>
 
           {% if article.summary %}
