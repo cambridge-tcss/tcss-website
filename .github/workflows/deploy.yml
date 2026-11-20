@@ -5,7 +5,8 @@ on:
     branches:
       - main
   schedule:
-    - cron: "0 1 * * *"
+    - cron: "47 0 * * *"
+    - cron: "17 12 * * *"
   workflow_dispatch:
 
 permissions:
@@ -15,7 +16,7 @@ permissions:
 
 concurrency:
   group: pages
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   build:
