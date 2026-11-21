@@ -188,6 +188,7 @@ content:
         label: Title
         type: string
         required: true
+        readonly: true
       - name: status
         label: Status
         type: select
