@@ -1,3 +1,6 @@
+settings:
+  hide: true
+  
 media:
   - name: images
     label: Page Images
