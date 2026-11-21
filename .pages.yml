@@ -74,9 +74,6 @@ content:
       - name: location
         label: Location
         type: string
-      - name: summary
-        label: Summary
-        type: text
       - name: body
         label: Body
         type: rich-text
@@ -128,9 +125,6 @@ content:
       - name: author
         label: Author
         type: string
-      - name: summary
-        label: Summary
-        type: text
       - name: body
         label: Body
         type: rich-text
@@ -182,12 +176,9 @@ content:
       - name: template
         label: Template
         type: string
-        readonly: true
       - name: url
         label: URL
         type: string
-        readonly: true
       - name: save_as
         label: Save as
         type: string
-        readonly: true
