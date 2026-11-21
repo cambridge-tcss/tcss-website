@@ -23,18 +23,12 @@ We are thoroughly excited to have you join us in sharing our passion.
 
 **Current Committees**
 
-President: Vedant Sakre
-
-Vice-President: Misheel Bat-Erdene
-
-Secretary: Hazel Herzog
-
-Treasurer: Lenny Hall
-
-Speakers Officer: Barry Luo
-
-Publicity and Events Officer: Jahan Syed
-
+President: Vedant Sakre  
+Vice-President: Misheel Bat-Erdene  
+Secretary: Hazel Herzog  
+Treasurer: Lenny Hall  
+Speakers Officer: Barry Luo  
+Publicity and Events Officer: Jahan Syed  
 Social Secretary: Sam Taylor
 
 **Contact info**
