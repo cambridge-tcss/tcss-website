@@ -1,3 +1,8 @@
+---
+title: Blog
+status: published
+date: 2026-11-21
+---
 Title: Blog
 Status: Published
 Template: blog_index
