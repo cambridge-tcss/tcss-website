@@ -192,6 +192,7 @@ ARTICLE_EXCLUDES = ["admin"]
 PAGE_EXCLUDES = ["admin"]
 EXTRA_PATH_METADATA = {
     "extra/googlec08cdfc542823a7d.html": {"path": "googlec08cdfc542823a7d.html"},
+    "extra/pages-index.html": {"path": "pages/index.html"} # This is a rick roll for people who try to access the pages index page. It is not linked anywhere on the site, so it would take very deliberate effort to find it. It is a fun easter egg for those who do find it, and a deterrent for those who try to access the pages index page.
 }
 
 # Organize static pages into /pages/
