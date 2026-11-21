@@ -7,15 +7,6 @@ eventtype: Talk
 speaker: Harry L. Anderson
 location: Pfizer Lecture Theatre
 ---
-Title: Synthesis of New Carbon Allotropes
-EventType: Talk
-Speaker: Harry L. Anderson
-Status: published
-Date: 2026-11-06
-Time: 18:30-19:30
-Location: Pfizer Lecture Theatre
-EventID: Anderson-2026-MT
-
 New carbon allotropes such as graphene and carbon nanotubes have led to
 many technological advances. Other carbon allotropes can be created by
 organic synthesis. The cyclo[*N*]carbons are a family of molecular
