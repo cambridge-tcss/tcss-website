@@ -1,3 +1,12 @@
+---
+title: Synthesis of New Carbon Allotropes
+status: published
+date: 2026-11-21
+time: 18:30-19:30
+eventtype: Talk
+speaker: Harry L. Anderson
+location: Pfizer Lecture Theatre
+---
 Title: Synthesis of New Carbon Allotropes
 EventType: Talk
 Speaker: Harry L. Anderson
@@ -14,14 +23,14 @@ carbon allotropes consisting of rings of two-coordinate atoms. There has
 been much recent progress towards understanding the structures and
 properties of these carbon rings. The on-surface synthesis and
 characterization of cyclo[18]carbons, by low-temperature atomic
-manipulation and scanning probe microscopy (shown below),<sup>1</sup> heralded
+manipulation and scanning probe microscopy (shown below),1 heralded
 the preparation of many other cyclo[*N*]carbons (*N* = 10, 13, 14, 16
-and 26).<sup>2,3</sup> Recent advances in this area will be presented, together
+and 26).2,3 Recent advances in this area will be presented, together
 with the synthesis of supramolecular cyclocarbon catenanes that are
 stable under ambient conditions. Previously cyclocarbons have only been
 studied in the gas phase or on surfaces as single molecules at cryogenic
 temperatures (4-10 K), but now they can be characterized in solution at
-room temperature.<sup>4</sup>
+room temperature.4
 ![on-surface synthesis and characterization of cyclo[18]carbons, by low-temperature atomic manipulation and scanning probe microscopy]({static}/static/event_media/image1.jpeg)
 
 Harry L. Anderson
@@ -29,23 +38,25 @@ Harry L. Anderson
 University of Oxford, Department of Chemistry, Oxford, OX1 3TA, United
 Kingdom
 
-harry.anderdson@chem.ox.ac.uk
+[harry.anderdson@chem.ox.ac.uk](mailto:harry.anderdson@chem.ox.ac.uk)
 
-1.  K. Kaiser, L. M. Scriven, F. Schulz, P. Gawel, L. Gross and H. L.
-    Anderson. An sp-hybridized molecular carbon allotrope,
-    cyclo\[18\]carbon. *Science*, 2019, **365**, 1299-1301.
+1. K. Kaiser, L. M. Scriven, F. Schulz, P. Gawel, L. Gross and H. L.
 
-2.  Y. Gao, F. Albrecht, I. Rončević, I. Ettedgui, P. Kumar, L. M.
-    Scriven, K. E. Christensen, S. Mishra, L. Righetti, M.
+  Anderson. An sp-hybridized molecular carbon allotrope,
+    cyclo18carbon. *Science*, 2019, **365**, 1299-1301.
+2. Y. Gao, F. Albrecht, I. Rončević, I. Ettedgui, P. Kumar, L. M.
+
+  Scriven, K. E. Christensen, S. Mishra, L. Righetti, M.
     Rossmannek, I. Tavernelli, H. L. Anderson and L. Gross. On-surface
     synthesis of a doubly anti-aromatic carbon allotrope:
-    Cyclo\[16\]carbon. *Nature*, 2023, **623**, 977-981.
+    Cyclo16carbon. *Nature*, 2023, **623**, 977-981.
+3. F. Albrecht, I. Rončević, Y. Gao, F. Paschke, A. Baiardi, I.
 
-3.  F. Albrecht, I. Rončević, Y. Gao, F. Paschke, A. Baiardi, I.
-    Tavernelli, S. Mishra, H. L. Anderson and L. Gross. The odd-number
-    cyclo\[13\]carbon and its dimer, cyclo\[26\]carbon. *Science*, 2024,
+  Tavernelli, S. Mishra, H. L. Anderson and L. Gross. The odd-number
+    cyclo13carbon and its dimer, cyclo26carbon. *Science*, 2024,
     **384**, 677-682.
+4. Y. Gao, P. Gupta, I. Rončević, C. Mycroft, P. J. Gates, A. W. Parker
 
-4.  Y. Gao, P. Gupta, I. Rončević, C. Mycroft, P. J. Gates, A. W. Parker
-    and H. L. Anderson. Solution-phase stabilization of a cyclocarbon by
+  and H. L. Anderson. Solution-phase stabilization of a cyclocarbon by
     catenane formation. *Science* 2025, **389**, 708-710.
+
