@@ -122,7 +122,7 @@ content:
       - name: eventid
         label: Event ID
         type: string
-        description: Optional. A unique identifier for this event, used to link to it from other pages (e.g. a blog post). Can be whatever you like, but must be unique across all events. e.g. "2023-10-15-talk-smith". Inputting the same event ID in "Related event ID" on a blog will display a link to the blog on the event page. Multiple blogs can link to the same event, but each event ID must be unique across all events.
+        description: Optional. A unique identifier for this event, to add link to related blog posts to the event page. Can be whatever you like, but must be unique across all events. e.g. "2023-10-15-talk-smith". Inputting the same event ID in "Related event ID" on a blog will display a link to the blog on the event page. Multiple blogs can link to the same event, but each event ID must be unique across all events.
 
   - name: blog
     label: Blog posts
