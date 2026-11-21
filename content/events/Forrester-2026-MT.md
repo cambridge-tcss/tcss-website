@@ -1,7 +1,7 @@
 ---
 title: The nose knows - What thermal imaging tells us about your stress state
 status: published
-date: 2026-10-23
+date: 2026-11-21
 time: 18:30-19:30
 eventtype: Talk
 speaker: Gillian Forrester
