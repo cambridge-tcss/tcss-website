@@ -2,6 +2,9 @@
 title: About Us
 status: published
 date: 2026-11-21
+summary: Trinity College Science Society (TCSS) hosts talks about science and a
+  variety of social events such as quizzes, formal swaps, and our popular annual
+  garden party.
 template: page
 url: about-us/
 save_as: pages/about-us.html
