@@ -1,7 +1,7 @@
 ---
 title: Scientific Treasures of the Wren Library
 status: published
-date: 2026-11-21
+date: 2026-11-20
 time: 18:30-19:30
 eventtype: Tour
 location: Wren Library (Trinity College)
