@@ -2,7 +2,7 @@
 title: "Small Interactions, Big Possibilities: A Journey from Molecular
   Recognition to Dynamic Materials"
 status: published
-date: 2026-11-21
+date: 2026-11-13
 time: 18:30-19:30
 eventtype: Talk
 speaker: Oren A. Scherman
