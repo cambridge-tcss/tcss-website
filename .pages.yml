@@ -54,7 +54,8 @@ content:
         label: Status
         type: select
         required: true
-        default: published
+        description: Set to published for it to show on the website.
+        default: draft
         options:
           values:
             - draft
@@ -146,7 +147,8 @@ content:
         label: Status
         type: select
         required: true
-        default: published
+        description: Set to published for it to show on the website.
+        default: draft
         options:
           values:
             - draft
@@ -190,7 +192,8 @@ content:
         label: Status
         type: select
         required: true
-        default: published
+        description: Set to published for it to show on the website.
+        default: draft
         options:
           values:
             - draft
@@ -242,7 +245,8 @@ content:
         label: Status
         type: select
         required: true
-        default: published
+        description: Set to published for it to show on the website.
+        default: draft
         options:
           values:
             - draft
