@@ -1,3 +1,13 @@
+---
+title: "Small Interactions, Big Possibilities: A Journey from Molecular
+  Recognition to Dynamic Materials"
+status: published
+date: 2026-11-21
+time: 18:30-19:30
+eventtype: Talk
+speaker: Oren A. Scherman
+location: Winstanley Lecture Theatre
+---
 Title: Small Interactions, Big Possibilities: A Journey from Molecular Recognition to Dynamic Materials
 EventType: Talk
 Speaker: Oren A. Scherman
