@@ -29,7 +29,8 @@ Secretary: Hazel Herzog
 Treasurer: Lenny Hall  
 Speakers Officer: Barry Luo  
 Publicity and Events Officer: Jahan Syed  
-Social Secretary: Sam Taylor
+Social Secretary: Sam Taylor  
+Webmaster: Max Lian
 
 **Contact info**
 
