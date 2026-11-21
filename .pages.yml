@@ -65,7 +65,7 @@ content:
       - name: time
         label: Event time
         type: string
-        description: e.g. 19:30 or 7:30 PM – 8:30 PM
+        description: e.g. 18:30-19:30 (Use 24-hour format, no AM/PM)
       - name: eventtype
         label: Event type
         type: string
