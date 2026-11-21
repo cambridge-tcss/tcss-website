@@ -4,6 +4,7 @@ status: published
 date: 2026-11-20
 time: 18:30-19:30
 eventtype: Tour
+speaker: Nicolas Bell
 location: Wren Library (Trinity College)
 note: non-Trinity members should meet at Great Gate at 18:20
 eventid: " WrenLib-2026-MT"
