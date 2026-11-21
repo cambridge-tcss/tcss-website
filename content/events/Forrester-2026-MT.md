@@ -7,15 +7,6 @@ eventtype: Talk
 speaker: Gillian Forrester
 location: Winstanley Lecture Theatre
 ---
-Title: The nose knows - What thermal imaging tells us about your stress state
-EventType: Talk
-Speaker: Gillian Forrester
-Status: published
-Date: 2026-10-23
-Time: 18:30-19:30
-Location: Winstanley Lecture Theatre
-EventID: Forrester-2026-MT
-
 We can often tell how someone is feeling by looking at their facial expressions, but emotion is more than skin deep. Advancements in technology are allowing scientists to visualise human and other great ape stress responses using thermal imaging. Professor Gilly Forrester will share her lab’s exciting new research detailing how the way blood flows in our faces reflects the stress state of our bodies. A live thermal imaging demonstration will show changing stress states in real time based on nasal temperature. Gilly’s research aims to increase our understanding of the relationships between stress, resilience, self-regulation, and psychological health. One of her aims is to use this approach to improve wellbeing of apes in captivity and to increase success rates of great ape rewilding efforts.
 
 **About the speaker:**   
