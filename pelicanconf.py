@@ -187,7 +187,7 @@ PATH = "content"
 # Tells Pelican where to find content (and google verification HTML)
 PAGE_PATHS = ["pages"]
 ARTICLE_PATHS = ["events", "blog"]
-STATIC_PATHS = ["static", "extra/googlec08cdfc542823a7d.html", "admin"]
+STATIC_PATHS = ["static", "extra", "admin"]
 ARTICLE_EXCLUDES = ["admin"]
 PAGE_EXCLUDES = ["admin"]
 EXTRA_PATH_METADATA = {
