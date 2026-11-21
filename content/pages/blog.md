@@ -1,3 +1,7 @@
+---
+title: Blog
+status: published
+---
 Title: Blog
 Status: Published
 Template: blog_index

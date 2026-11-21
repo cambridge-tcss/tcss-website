@@ -1,3 +1,7 @@
+---
+title: Events
+status: published
+---
 Title: Events
 Status: Published
 Template: event_index
