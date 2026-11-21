@@ -4,13 +4,16 @@ from pathlib import Path
 
 from pelican import signals
 
-def resolve_custom_eventtype(instance):
-    if getattr(instance, "eventtype", None) == "Other":
-        custom = getattr(instance, "eventtype_custom", "").strip()
-        if custom:
-            instance.eventtype = custom
+from pelican import signals
 
-signals.content_object_init.connect(resolve_custom_eventtype)
+def resolve_custom_fields(instance):
+    if getattr(instance, "eventtype", None) == "Other":
+        instance.eventtype = str(getattr(instance, "eventtype_custom", "") or "").strip()
+
+    if getattr(instance, "location", None) == "Other":
+        instance.location = str(getattr(instance, "location_custom", "") or "").strip()
+
+signals.content_object_init.connect(resolve_custom_fields)
 
 def load_sponsors():
     sponsors_file = Path(__file__).parent / "data" / "sponsors.csv"

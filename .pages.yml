@@ -93,7 +93,17 @@ content:
         type: string
       - name: location
         label: Location
+        type: select
+        description: Select a venue (Those with location guides automatically link to their location guides), or choose "Other" to enter a custom venue below.
+        options:
+          values:
+            - Winstanley Lecture Theatre
+            - Pfizer Lecture Theatre
+            - Other
+      - name: location_custom
+        label: Custom location (if "Other" selected)
         type: string
+        description: Only fill this in when Location above is set to "Other" (e.g. "Babbage Lecture Theatre" or "The Eagle"). Leave blank otherwise.
       - name: body
         label: Body
         type: rich-text
