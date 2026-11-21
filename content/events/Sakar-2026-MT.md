@@ -1,7 +1,7 @@
 ---
 title: Seeing the High Energy Universe
 status: published
-date: 2026-11-21
+date: 2026-11-09
 time: 18:30-19:30
 eventtype: Talk
 speaker: Subir Sarkar
