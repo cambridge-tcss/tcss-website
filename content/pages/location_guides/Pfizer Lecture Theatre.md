@@ -2,12 +2,8 @@
 title: Pfizer Lecture Theatre
 status: published
 date: 2026-11-21
+summary: Directions and map for TCSS events at the Pfizer Lecture Theatre.
 ---
-Title: Pfizer Lecture Theatre
-Date: 2026-10-01
-Summary: Directions and map for TCSS events at the Pfizer Lecture Theatre.
-Status: published
-
 ## Location Details
 
 **Venue:** Pfizer Lecture Theatre  
