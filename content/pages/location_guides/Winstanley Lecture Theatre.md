@@ -1,13 +1,10 @@
 ---
 title: Winstanley Lecture Theatre
 status: published
-date: 2026-11-21
+date: 2026-10-01
+summary: Directions and access guide for TCSS events at the Winstanley Lecture
+  Theatre, Trinity College.
 ---
-Title: Winstanley Lecture Theatre
-Date: 2026-10-01
-Summary: Directions and access guide for TCSS events at the Winstanley Lecture Theatre, Trinity College.
-Status: published
-
 ## Location Details
 
 **Venue:** Winstanley Lecture Theatre (Blue Boar Court)  
