@@ -1,3 +1,8 @@
+---
+title: Pfizer Lecture Theatre
+status: published
+date: 2026-11-21
+---
 Title: Pfizer Lecture Theatre
 Date: 2026-10-01
 Summary: Directions and map for TCSS events at the Pfizer Lecture Theatre.
@@ -5,13 +10,11 @@ Status: published
 
 ## Location Details
 
-<p class="location-details">
-<strong>Venue:</strong> Pfizer Lecture Theatre<br>
-<strong>Building:</strong> Yusuf Hamied Department of Chemistry<br>
-<strong>Address:</strong> Lensfield Road, Cambridge, CB2 1EW<br>
-<strong>What3Words (Building Entrance):</strong> <a href="https://what3words.com/valve.cost.arts"><code>///valve.cost.arts</code></a><br>
-<strong>Accessibility Guide:</strong> <a href="https://www.accessable.co.uk/university-of-cambridge/trumpington-street-and-lensfield-road/access-guides/pfizer-lecture-theatre#BAE60A0D-BDB8-0446-B412-1A86F567AE85">AccessAble Page</a>
-</p>
+**Venue:** Pfizer Lecture Theatre  
+**Building:** Yusuf Hamied Department of Chemistry  
+**Address:** Lensfield Road, Cambridge, CB2 1EW  
+**What3Words (Building Entrance):** `///valve.cost.arts`  
+**Accessibility Guide:** [AccessAble Page](https://www.accessable.co.uk/university-of-cambridge/trumpington-street-and-lensfield-road/access-guides/pfizer-lecture-theatre#BAE60A0D-BDB8-0446-B412-1A86F567AE85)
 
 ## How to Get Here
 
@@ -21,11 +24,3 @@ Status: published
 
 ## Interactive Map
 
-<iframe 
-  src="https://maps.google.com/maps?q=Department+of+Chemistry,+University+of+Cambridge,+Lensfield+Road&t=k&z=16&ie=UTF8&iwloc=&output=embed" 
-  width="100%" 
-  height="400" 
-  style="border:0; border-radius: 8px;" 
-  allowfullscreen="" 
-  loading="lazy">
-</iframe>
