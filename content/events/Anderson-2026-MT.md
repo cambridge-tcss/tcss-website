@@ -1,7 +1,7 @@
 ---
 title: Synthesis of New Carbon Allotropes
 status: published
-date: 2026-11-21
+date: 2026-11-06
 time: 18:30-19:30
 eventtype: Talk
 speaker: Harry L. Anderson
