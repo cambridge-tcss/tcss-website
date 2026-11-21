@@ -9,7 +9,7 @@ template: page
 url: about-us/
 save_as: pages/about-us.html
 ---
-![TCSS_ABOUT_US_LOGO](/static/images/image-1.png)
+![TCSS_ABOUT_US_LOGO](/static/images/About-us-banger.png)
 
 **Society background**
 
