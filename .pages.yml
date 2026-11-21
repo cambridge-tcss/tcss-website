@@ -68,8 +68,26 @@ content:
         description: e.g. 18:30-19:30 (Use 24-hour format, no AM/PM)
       - name: eventtype
         label: Event type
-        type: string
+        type: select
         required: true
+        default: Talk
+        options:
+          values:
+            - Talk
+            - Symposium
+            - Panel
+            - Tour
+            - Workshop
+            - Social
+            - Quiz
+            - Garden Party
+            - Screening
+            - AGM
+            - Other
+      - name: eventtype_custom
+        label: Custom event type (if "Other" selected)
+        type: string
+        description: Only fill this in when Event type above is set to "Other" (e.g. "Hackathon" or "Lab Visit"). Leave blank otherwise.
       - name: speaker
         label: Speaker
         type: string

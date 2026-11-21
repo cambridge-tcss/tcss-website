@@ -4,6 +4,13 @@ from pathlib import Path
 
 from pelican import signals
 
+def resolve_custom_eventtype(instance):
+    if getattr(instance, "eventtype", None) == "Other":
+        custom = getattr(instance, "eventtype_custom", "").strip()
+        if custom:
+            instance.eventtype = custom
+
+signals.content_object_init.connect(resolve_custom_eventtype)
 
 def load_sponsors():
     sponsors_file = Path(__file__).parent / "data" / "sponsors.csv"
