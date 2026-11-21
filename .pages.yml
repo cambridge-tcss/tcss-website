@@ -19,10 +19,16 @@ media:
     input: content/static/documents
     output: /static/documents
     categories: [document]
-  - name: all_static
-    label: All Static Assets
-    input: content/static
-    output: /static
+  - name: social_logos
+    label: Social Logos
+    input: content/static/social_logos
+    output: /static/social_logos
+    categories: [image]
+  - name: sponsor_logos
+    label: Sponsor Logos
+    input: content/static/sponsor_logos
+    output: /static/sponsor_logos
+    categories: [image]
 
 content:
   - name: events
@@ -170,7 +176,7 @@ content:
     label: Pages
     type: collection
     path: content/pages
-    subfolders: true
+    subfolders: false
     filename: "{primary}.md"
     view:
       fields: [title, status, date]
@@ -192,9 +198,62 @@ content:
             - published
             - Published
       - name: date
-        label: Date last changed
+        label: Date last updated
         type: date
-        description: Optional. The date this page was last updated.
+        description: The date this page was last updated.
+        options:
+          time: false
+          format: "yyyy-MM-dd"
+      - name: summary
+        label: Summary
+        type: text
+        description: Short description displayed in search engine results and link previews.
+      - name: body
+        label: Body
+        type: rich-text
+        options:
+          media: images
+      - name: template
+        label: Template
+        type: string
+        readonly: true
+      - name: url
+        label: URL
+        type: string
+        readonly: true
+      - name: save_as
+        label: Save as
+        type: string
+        readonly: true
+
+  - name: location_guides
+    label: Location Guides
+    type: collection
+    path: content/pages/location_guides
+    filename: "{primary}.md"
+    view:
+      fields: [title, status, date]
+      primary: title
+      sort: [title]
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: status
+        label: Status
+        type: select
+        required: true
+        default: published
+        options:
+          values:
+            - draft
+            - published
+            - Published
+      - name: date
+        label: Date last updated
+        type: date
+        description: The date this location guide was last updated.
         options:
           time: false
           format: "yyyy-MM-dd"
