@@ -55,8 +55,9 @@ content:
             - published
             - Published
       - name: date
-        label: Date
+        label: Event date
         type: date
+        description: The date the event takes place (also used in the filename).
         required: true
         options:
           time: false
@@ -64,6 +65,7 @@ content:
       - name: time
         label: Event time
         type: string
+        description: e.g. 19:30 or 7:30 PM – 8:30 PM
       - name: eventtype
         label: Event type
         type: string
@@ -116,8 +118,9 @@ content:
             - published
             - Published
       - name: date
-        label: Date
+        label: Date published
         type: date
+        description: Publication date shown on the post and used to sort the blog feed.
         required: true
         options:
           time: false
@@ -160,14 +163,20 @@ content:
             - published
             - Published
       - name: date
-        label: Date
+        label: Date last changed
         type: date
+        description: Optional. The date this page was last updated.
         options:
           time: false
           format: "yyyy-MM-dd"
       - name: summary
         label: Summary
         type: text
+        description: Short description displayed in search engine results and link previews.
+      - name: map_embed
+        label: Google Maps Embed URL
+        type: string
+        description: Optional (for location guides). Paste only the src URL from Google Maps (Share → Embed a map), e.g. https://www.google.com/maps/embed?pb=...
       - name: body
         label: Body
         type: rich-text
@@ -176,9 +185,12 @@ content:
       - name: template
         label: Template
         type: string
+        readonly: true
       - name: url
         label: URL
         type: string
+        readonly: true
       - name: save_as
         label: Save as
         type: string
+        readonly: true
