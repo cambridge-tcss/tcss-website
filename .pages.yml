@@ -112,7 +112,7 @@ content:
       - name: note
         label: Note
         type: text
-        description: Optional. A short note displayed on the event listing. e.g. "Non-Trinity members should meet at the Great Gate at 18:20"
+        description: Optional. A short note displayed on the event listing. e.g. "Non-Trinity members should meet at the Great Gate on Trinity Street at 18:20"
       - name: eventid
         label: Event ID
         type: string
