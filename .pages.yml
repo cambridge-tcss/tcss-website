@@ -1,6 +1,6 @@
 settings:
   hide: true
-  
+
 media:
   - name: images
     label: Page Images
@@ -192,6 +192,7 @@ content:
         type: string
         required: true
         readonly: true
+        descrioption: Oi! Are you trying to add a new page to the menu bar? That is likely not necessary. Please contact an responsible adult to add a new page. If you are an irresponsible adult and need to add a new page, please find a competent webmaster.
       - name: status
         label: Status
         type: select
