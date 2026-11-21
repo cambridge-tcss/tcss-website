@@ -4,6 +4,7 @@ status: published
 date: 2026-10-01
 summary: Directions and access guide for TCSS events at the Winstanley Lecture
   Theatre, Trinity College.
+map_embed: https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d580.2084813137602!2d0.1175198!3d52.2071608!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8713286d59459%3A0x52ef3ca7a399c810!2sPost%20Box!5e1!3m2!1sen!2suk!4v1790847629711!5m2!1sen!2suk&t=k
 ---
 ## Location Details
 
