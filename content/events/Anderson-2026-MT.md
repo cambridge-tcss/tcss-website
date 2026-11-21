@@ -22,7 +22,7 @@ stable under ambient conditions. Previously cyclocarbons have only been
 studied in the gas phase or on surfaces as single molecules at cryogenic
 temperatures (4-10 K), but now they can be characterized in solution at
 room temperature.<sup>4</sup>
-![on-surface synthesis and characterization of cyclo[18]carbons, by low-temperature atomic manipulation and scanning probe microscopy]({static}/static/event_media/media/image1.jpeg)
+![on-surface synthesis and characterization of cyclo[18]carbons, by low-temperature atomic manipulation and scanning probe microscopy]({static}/static/event_media/image1.jpeg)
 
 Harry L. Anderson
 

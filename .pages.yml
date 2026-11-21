@@ -1,93 +1,144 @@
 media:
-  input: content/static/images
-  output: /static/images
+  - name: images
+    label: Page Images
+    input: content/static/images
+    output: /static/images
+    categories: [image]
+  - name: event_media
+    label: Event Media
+    input: content/static/event_media
+    output: /static/event_media
+    categories: [image]
+  - name: blog_media
+    label: Blog Media
+    input: content/static/blog_media
+    output: /static/blog_media
+    categories: [image]
+  - name: documents
+    label: Documents
+    input: content/static/documents
+    output: /static/documents
+    categories: [document]
+  - name: all_static
+    label: All Static Assets
+    input: content/static
+    output: /static
 
 content:
   - name: events
     label: Events
     type: collection
     path: content/events
-    filename: "{year}-{month}-{day}-{primary}.md"
+    filename:
+      template: "{fields.date}-{fields.eventtype}-{primary}.md"
+      field: create
+    view:
+      fields: [title, date, status, eventtype, speaker]
+      primary: title
+      sort: [date, title]
+      default:
+        sort: date
+        order: desc
     fields:
       - name: title
         label: Title
         type: string
         required: true
+      - name: status
+        label: Status
+        type: select
+        required: true
+        default: published
+        options:
+          values:
+            - draft
+            - published
+            - Published
       - name: date
         label: Date
         type: date
+        required: true
         options:
-          time: true
-          format: "yyyy-MM-dd HH:mm"
+          time: false
+          format: "yyyy-MM-dd"
+      - name: time
+        label: Event time
+        type: string
       - name: eventtype
         label: Event type
         type: string
+        required: true
       - name: speaker
         label: Speaker
-        type: string
-      - name: time
-        label: Event time
         type: string
       - name: location
         label: Location
         type: string
+      - name: summary
+        label: Summary
+        type: text
+      - name: body
+        label: Body
+        type: rich-text
+        options:
+          media: event_media
       - name: note
         label: Note
         type: text
       - name: eventid
         label: Event ID
         type: string
-      - name: summary
-        label: Summary
-        type: text
-      - name: status
-        label: Status
-        type: select
-        options:
-          values:
-            - draft
-            - published
-            - Published
-      - name: body
-        label: Body
-        type: rich-text
 
   - name: blog
     label: Blog posts
     type: collection
     path: content/blog
-    filename: "{year}-{month}-{day}-{primary}.md"
+    filename:
+      template: "{fields.date}-{primary}.md"
+      field: create
+    view:
+      fields: [title, date, status, author]
+      primary: title
+      sort: [date, title]
+      default:
+        sort: date
+        order: desc
     fields:
       - name: title
         label: Title
         type: string
         required: true
-      - name: date
-        label: Date
-        type: date
-        options:
-          time: true
-          format: "yyyy-MM-dd HH:mm"
-      - name: author
-        label: Author
-        type: string
-      - name: eventid
-        label: Related event ID
-        type: string
-      - name: summary
-        label: Summary
-        type: text
       - name: status
         label: Status
         type: select
+        required: true
+        default: published
         options:
           values:
             - draft
             - published
             - Published
+      - name: date
+        label: Date
+        type: date
+        required: true
+        options:
+          time: false
+          format: "yyyy-MM-dd"
+      - name: author
+        label: Author
+        type: string
+      - name: summary
+        label: Summary
+        type: text
       - name: body
         label: Body
         type: rich-text
+        options:
+          media: blog_media
+      - name: eventid
+        label: Related event ID
+        type: string
 
   - name: pages
     label: Pages
@@ -95,37 +146,48 @@ content:
     path: content/pages
     subfolders: true
     filename: "{primary}.md"
+    view:
+      fields: [title, status, date]
+      primary: title
+      sort: [title]
     fields:
       - name: title
         label: Title
         type: string
         required: true
-      - name: date
-        label: Date
-        type: date
-        options:
-          time: true
-          format: "yyyy-MM-dd HH:mm"
-      - name: summary
-        label: Summary
-        type: text
       - name: status
         label: Status
         type: select
+        required: true
+        default: published
         options:
           values:
             - draft
             - published
             - Published
-      - name: template
-        label: Template
-        type: string
-      - name: url
-        label: URL
-        type: string
-      - name: save_as
-        label: Save as
-        type: string
+      - name: date
+        label: Date
+        type: date
+        options:
+          time: false
+          format: "yyyy-MM-dd"
+      - name: summary
+        label: Summary
+        type: text
       - name: body
         label: Body
         type: rich-text
+        options:
+          media: images
+      - name: template
+        label: Template
+        type: string
+        readonly: true
+      - name: url
+        label: URL
+        type: string
+        readonly: true
+      - name: save_as
+        label: Save as
+        type: string
+        readonly: true
