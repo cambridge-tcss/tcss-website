@@ -1,0 +1,131 @@
+media:
+  input: content/static/images
+  output: /static/images
+
+content:
+  - name: events
+    label: Events
+    type: collection
+    path: content/events
+    filename: "{year}-{month}-{day}-{primary}.md"
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: date
+        label: Date
+        type: date
+        options:
+          time: true
+          format: "yyyy-MM-dd HH:mm"
+      - name: eventtype
+        label: Event type
+        type: string
+      - name: speaker
+        label: Speaker
+        type: string
+      - name: time
+        label: Event time
+        type: string
+      - name: location
+        label: Location
+        type: string
+      - name: note
+        label: Note
+        type: text
+      - name: eventid
+        label: Event ID
+        type: string
+      - name: summary
+        label: Summary
+        type: text
+      - name: status
+        label: Status
+        type: select
+        options:
+          values:
+            - draft
+            - published
+            - Published
+      - name: body
+        label: Body
+        type: rich-text
+
+  - name: blog
+    label: Blog posts
+    type: collection
+    path: content/blog
+    filename: "{year}-{month}-{day}-{primary}.md"
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: date
+        label: Date
+        type: date
+        options:
+          time: true
+          format: "yyyy-MM-dd HH:mm"
+      - name: author
+        label: Author
+        type: string
+      - name: eventid
+        label: Related event ID
+        type: string
+      - name: summary
+        label: Summary
+        type: text
+      - name: status
+        label: Status
+        type: select
+        options:
+          values:
+            - draft
+            - published
+            - Published
+      - name: body
+        label: Body
+        type: rich-text
+
+  - name: pages
+    label: Pages
+    type: collection
+    path: content/pages
+    subfolders: true
+    filename: "{primary}.md"
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: date
+        label: Date
+        type: date
+        options:
+          time: true
+          format: "yyyy-MM-dd HH:mm"
+      - name: summary
+        label: Summary
+        type: text
+      - name: status
+        label: Status
+        type: select
+        options:
+          values:
+            - draft
+            - published
+            - Published
+      - name: template
+        label: Template
+        type: string
+      - name: url
+        label: URL
+        type: string
+      - name: save_as
+        label: Save as
+        type: string
+      - name: body
+        label: Body
+        type: rich-text

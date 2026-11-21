@@ -150,7 +150,7 @@ DEFAULT_PAGINATION = 10
 RELATIVE_URLS = True
 
 # Generate site map
-PLUGINS = ["sitemap"]
+PLUGINS = ["sitemap", "yaml_metadata"]
 
 SITEMAP = {
     "format": "xml",
@@ -177,7 +177,9 @@ PATH = "content"
 # Tells Pelican where to find content (and google verification HTML)
 PAGE_PATHS = ["pages"]
 ARTICLE_PATHS = ["events", "blog"]
-STATIC_PATHS = ["static", "extra/googlec08cdfc542823a7d.html"]
+STATIC_PATHS = ["static", "extra/googlec08cdfc542823a7d.html", "admin"]
+ARTICLE_EXCLUDES = ["admin"]
+PAGE_EXCLUDES = ["admin"]
 EXTRA_PATH_METADATA = {
     "extra/googlec08cdfc542823a7d.html": {"path": "googlec08cdfc542823a7d.html"},
 }
