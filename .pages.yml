@@ -94,7 +94,7 @@ content:
       - name: location
         label: Location
         type: select
-        description: Select a venue (Those with location guides automatically link to their location guides), or choose "Other" to enter a custom venue below.
+        description: Select a venue here if the event venue is listed in the dropdown menu (Options with location guides automatically link to their location guides), or choose "Other" to enter a custom venue below.
         options:
           values:
             - Winstanley Lecture Theatre
