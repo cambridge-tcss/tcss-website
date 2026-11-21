@@ -2,6 +2,9 @@
 title: About Us
 status: published
 date: 2026-08-29
+template: page
+url: about-us/
+save_as: pages/about-us.html
 ---
 ![TCSS_ABOUT_US_LOGO](/static/images/image-1.png)
 
@@ -18,17 +21,17 @@ We are thoroughly excited to have you join us in sharing our passion.
 **Current Committees**
 
 President: Vedant Sakre
-  
+
 Vice-President: Misheel Bat-Erdene
-  
+
 Secretary: Hazel Herzog
-  
+
 Treasurer: Lenny Hall
-  
+
 Speakers Officer: Barry Luo
-  
+
 Publicity and Events Officer: Jahan Syed
-  
+
 Social Secretary: Sam Taylor
 
 **Contact info**
