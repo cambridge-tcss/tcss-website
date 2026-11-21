@@ -2,8 +2,8 @@
 title: Pfizer Lecture Theatre
 status: published
 date: 2026-11-21
-summary: Directions and map for TCSS events at the Pfizer Lecture Theatre in
-  Yusuf Hamied Department of Chemistry
+summary: Directions and map for TCSS events at the Pfizer Lecture Theatre, Yusuf
+  Hamied Department of Chemistry
 ---
 ## Location Details
 
