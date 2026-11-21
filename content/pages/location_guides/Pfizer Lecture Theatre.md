@@ -4,6 +4,7 @@ status: published
 date: 2026-10-01
 summary: Directions and map for TCSS events at the Pfizer Lecture Theatre, Yusuf
   Hamied Department of Chemistry
+map_embed: https://maps.google.com/maps?q=Department+of+Chemistry,+University+of+Cambridge,+Lensfield+Road&t=k&z=16&ie=UTF8&iwloc=&output=embed
 ---
 ## Location Details
 
