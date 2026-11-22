@@ -290,6 +290,13 @@ h2.page-title {
 .summary a:visited,
 .article-card--summary a:link,
 .article-card--summary a:visited,
+.no-posts-notice a:link,
+.no-posts-notice a:visited {
+  color: var(--color-accent);
+  text-decoration: underline;
+  font-weight: 500;
+}
+
 .content-link:link,
 .content-link:visited {
   color: var(--color-accent);
@@ -301,7 +308,8 @@ h2.page-title {
 .page-content .page-body a:hover,
 .summary a:hover,
 .article-card--summary a:hover,
-.content-link:hover {
+.content-link:hover, 
+.no-posts-notice a:hover {
   color: var(--color-accent-hover);
 }
 
