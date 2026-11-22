@@ -33,7 +33,7 @@
         <li><a href="{{ SITEURL }}/blog/" class="{% if page and page.url == 'blog/' or article and article.category.name|lower == 'blog' %}active{% endif %}">
             Blog
         </a></li>
-        <li><a href="{{ SITEURL }}/pages/about-us.html" class="{% if page and page.url == 'pages/about-us.html' %}active{% endif %}">
+        <li><a href="{{ SITEURL }}/pages/about-us.html" class="{% if page and page.save_as == 'pages/about-us.html' %}active{% endif %}">
             About
         </a></li>
       </ul>
