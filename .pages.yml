@@ -267,15 +267,15 @@ content:
         label: Summary
         type: text
         description: Short description displayed in search engine results and link previews.
-      - name: map_embed
-        label: Google Maps Embed URL
-        type: string
-        description: For displaying an interactive Google Maps embed at the bottom. Paste only the src URL from Google Maps (Share → Embed a map), e.g. https://www.google.com/maps/embed?pb=...
       - name: body
         label: Body
         type: rich-text
         options:
           media: images
+      - name: map_embed
+        label: Google Maps Embed URL
+        type: string
+        description: For displaying an interactive Google Maps embed at the bottom. Paste only the src URL from Google Maps (Share → Embed a map), e.g. https://www.google.com/maps/embed?pb=...
       - name: template
         label: Template
         type: string
