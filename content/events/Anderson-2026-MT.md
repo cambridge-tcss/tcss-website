@@ -24,6 +24,8 @@ temperatures (4-10 K), but now they can be characterized in solution at
 room temperature.4
 ![on-surface synthesis and characterization of cyclo[18]carbons, by low-temperature atomic manipulation and scanning probe microscopy]({static}/static/event_media/Anderson-2026-MT-1.jpeg)
 
+**Speaker Information**
+
 Harry L. Anderson
 
 University of Oxford, Department of Chemistry, Oxford, OX1 3TA, United
@@ -31,23 +33,10 @@ Kingdom
 
 [harry.anderdson@chem.ox.ac.uk](mailto:harry.anderdson@chem.ox.ac.uk)
 
-1. K. Kaiser, L. M. Scriven, F. Schulz, P. Gawel, L. Gross and H. L.
+**References** 
 
-  Anderson. An sp-hybridized molecular carbon allotrope,  
-    cyclo18carbon. *Science*, 2019, **365**, 1299-1301.
-2. Y. Gao, F. Albrecht, I. Rončević, I. Ettedgui, P. Kumar, L. M.
-
-  Scriven, K. E. Christensen, S. Mishra, L. Righetti, M.  
-    Rossmannek, I. Tavernelli, H. L. Anderson and L. Gross. On-surface  
-    synthesis of a doubly anti-aromatic carbon allotrope:  
-    Cyclo16carbon. *Nature*, 2023, **623**, 977-981.
-3. F. Albrecht, I. Rončević, Y. Gao, F. Paschke, A. Baiardi, I.
-
-  Tavernelli, S. Mishra, H. L. Anderson and L. Gross. The odd-number  
-    cyclo13carbon and its dimer, cyclo26carbon. *Science*, 2024,  
-    **384**, 677-682.
-4. Y. Gao, P. Gupta, I. Rončević, C. Mycroft, P. J. Gates, A. W. Parker
-
-  and H. L. Anderson. Solution-phase stabilization of a cyclocarbon by
-    catenane formation. *Science* 2025, **389**, 708-710.
+1. K. Kaiser, L. M. Scriven, F. Schulz, P. Gawel, L. Gross and H. L. Anderson. An sp-hybridized molecular carbon allotrope, cyclo18carbon. *Science*, 2019, **365**, 1299-1301.
+2. Y. Gao, F. Albrecht, I. Rončević, I. Ettedgui, P. Kumar, L. M. Scriven, K. E. Christensen, S. Mishra, L. Righetti, M. Rossmannek, I. Tavernelli, H. L. Anderson and L. Gross. On-surface synthesis of a doubly anti-aromatic carbon allotrope: Cyclo16carbon. *Nature*, 2023, **623**, 977-981.
+3. F. Albrecht, I. Rončević, Y. Gao, F. Paschke, A. Baiardi, I. Tavernelli, S. Mishra, H. L. Anderson and L. Gross. The odd-number cyclo13carbon and its dimer, cyclo26carbon. *Science*, 2024, **384**, 677-682.
+4. Y. Gao, P. Gupta, I. Rončević, C. Mycroft, P. J. Gates, A. W. Parker and H. L. Anderson. Solution-phase stabilization of a cyclocarbon by catenane formation. *Science* 2025, **389**, 708-710.
 
