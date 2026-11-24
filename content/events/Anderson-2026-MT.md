@@ -33,18 +33,18 @@ Kingdom
 
 1. K. Kaiser, L. M. Scriven, F. Schulz, P. Gawel, L. Gross and H. L.
 
-  Anderson. An sp-hybridized molecular carbon allotrope,
+  Anderson. An sp-hybridized molecular carbon allotrope,  
     cyclo18carbon. *Science*, 2019, **365**, 1299-1301.
 2. Y. Gao, F. Albrecht, I. Rončević, I. Ettedgui, P. Kumar, L. M.
 
-  Scriven, K. E. Christensen, S. Mishra, L. Righetti, M.
-    Rossmannek, I. Tavernelli, H. L. Anderson and L. Gross. On-surface
-    synthesis of a doubly anti-aromatic carbon allotrope:
+  Scriven, K. E. Christensen, S. Mishra, L. Righetti, M.  
+    Rossmannek, I. Tavernelli, H. L. Anderson and L. Gross. On-surface  
+    synthesis of a doubly anti-aromatic carbon allotrope:  
     Cyclo16carbon. *Nature*, 2023, **623**, 977-981.
 3. F. Albrecht, I. Rončević, Y. Gao, F. Paschke, A. Baiardi, I.
 
-  Tavernelli, S. Mishra, H. L. Anderson and L. Gross. The odd-number
-    cyclo13carbon and its dimer, cyclo26carbon. *Science*, 2024,
+  Tavernelli, S. Mishra, H. L. Anderson and L. Gross. The odd-number  
+    cyclo13carbon and its dimer, cyclo26carbon. *Science*, 2024,  
     **384**, 677-682.
 4. Y. Gao, P. Gupta, I. Rončević, C. Mycroft, P. J. Gates, A. W. Parker
 
