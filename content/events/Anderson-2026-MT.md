@@ -7,21 +7,8 @@ eventtype: Talk
 speaker: Harry L. Anderson
 location: Pfizer Lecture Theatre
 ---
-New carbon allotropes such as graphene and carbon nanotubes have led to
-many technological advances. Other carbon allotropes can be created by
-organic synthesis. The cyclo[*N*]carbons are a family of molecular  
-carbon allotropes consisting of rings of two-coordinate atoms. There has  
-been much recent progress towards understanding the structures and  
-properties of these carbon rings. The on-surface synthesis and  
-characterization of cyclo[18]carbons, by low-temperature atomic  
-manipulation and scanning probe microscopy (shown below) [1], heralded  
-the preparation of many other cyclo[*N*]carbons (*N* = 10, 13, 14, 16  
-and 26) [2,3]. Recent advances in this area will be presented, together  
-with the synthesis of supramolecular cyclocarbon catenanes that are  
-stable under ambient conditions. Previously cyclocarbons have only been  
-studied in the gas phase or on surfaces as single molecules at cryogenic  
-temperatures (4-10 K), but now they can be characterized in solution at  
-room temperature [4].  
+New carbon allotropes such as graphene and carbon nanotubes have led to many technological advances. Other carbon allotropes can be created by organic synthesis. The cyclo[*N*]carbons are a family of molecular carbon allotropes consisting of rings of two-coordinate atoms. There has been much recent progress towards understanding the structures and properties of these carbon rings. The on-surface synthesis and characterization of cyclo[18]carbons, by low-temperature atomic manipulation and scanning probe microscopy (shown below) [1], heralded the preparation of many other cyclo[*N*]carbons (*N* = 10, 13, 14, 16 and 26) [2,3]. Recent advances in this area will be presented, together with the synthesis of supramolecular cyclocarbon catenanes that are stable under ambient conditions. Previously cyclocarbons have only been studied in the gas phase or on surfaces as single molecules at cryogenic temperatures (4-10 K), but now they can be characterized in solution at room temperature [4].
+
 
 
 **Speaker Information**
