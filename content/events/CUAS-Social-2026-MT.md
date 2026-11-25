@@ -1,6 +1,6 @@
 ---
 title: "Stargazing Social - TCSS X CUAS Collaboration Event "
-status: draft
+status: published
 date: 2026-11-28
 time: 19:00 onwards
 eventtype: Social
